@@ -29,7 +29,7 @@ const IndexPage = () => (
             freelance projects creating interpretive signs and laying out
             scientific reports.
           </p>
-          <Link className="home__button button" to="/About">
+          <Link className="home__button button" to="/about">
             Read more
             <span className="sr-only">about Eliza</span>
           </Link>
