@@ -1,9 +1,9 @@
 import React from "react"
-import ProjectList from "../components/ProjectList"
+import ProjectList from "../components/projectList"
 import projects from "../data/projects.js"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Work = () => (
   <Layout>
@@ -13,15 +13,15 @@ const Work = () => (
         <h1>Work</h1>
         <p>
           As a <strong>web developer</strong>, I contribute to large scale
-          content and API driven applications for clients ranging from financial
-          services to retail to non-profit. I started out as a UI developer
-          creating custom emails, campaign-driven single page sites, HTML5
-          animations, and managing CMS content and theming for a digital agency.
-          Now, as a full-stack developer, I primarily work with React and Redux
-          incorporating single page applications into .NET environments on large
-          applications. This includes developing pattern libraries, performing
-          test driven development, mitigating for accessibility in javascript
-          frameworks, and cross-browser compatibility.
+          content &amp; API driven applications for clients ranging from
+          financial services to retail to non-profit. I started out as a UI
+          developer creating custom emails, campaign-driven single page sites,
+          HTML5 animations, and managing CMS content &amp; theming for a digital
+          agency. I now work with React and Redux incorporating single page
+          applications into .NET environments on large applications. This
+          includes developing pattern libraries, performing test driven
+          development, mitigating for accessibility in javascript frameworks,
+          and cross-browser compatibility.
         </p>
         <p>
           As <strong>web designer</strong>, I create end-to-end experiences

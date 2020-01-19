@@ -2,17 +2,17 @@
 @import "./base/all";
 
 // shared components
-@import "../components/styles/Layout";
-@import "../components/styles/Navbar";
-@import "../components/styles/Footer";
-@import "../components/styles/ProjectList";
-@import "../components/styles/ArticleList";
+@import "../components/styles/layout";
+@import "../components/styles/navbar";
+@import "../components/styles/footer";
+@import "../components/styles/projectList";
+@import "../components/styles/articleList";
 
 // pages
 @import "../pages/styles/index";
-@import "../pages/styles/About";
-@import "../pages/styles/Work";
-@import "../pages/styles/Contact";
+@import "../pages/styles/about";
+@import "../pages/styles/work";
+@import "../pages/styles/contact";
 
 #___gatsby,
 #gatsby-focus-wrapper {

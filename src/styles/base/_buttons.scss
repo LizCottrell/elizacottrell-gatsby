@@ -25,5 +25,7 @@
 .button-link {
   @extend a;
   border: none;
+  line-height: 1.6em;
   padding: 0;
+  text-align: left;
 }

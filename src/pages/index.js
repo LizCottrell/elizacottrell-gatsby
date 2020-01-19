@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import "../styles/main.scss"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const IndexPage = () => (
   <React.Fragment>

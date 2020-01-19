@@ -1,5 +1,31 @@
 .contact {
   .resume {
     display: flex;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      max-width: 850px;
+      max-height: 1100px;
+      width: 100%;
+      height: auto;
+    }
   }
+}
+
+.toggleContent-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.toggleContent-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
 }

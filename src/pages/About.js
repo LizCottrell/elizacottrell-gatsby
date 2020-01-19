@@ -1,16 +1,16 @@
 import React, { Component } from "react"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import ArticleList from "../components/ArticleList"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import ArticleList from "../components/articleList"
 // import Pills from "../../components/Pills";
 import timeline from "../data/timeline.js"
 import articles from "../data/articles.js"
 import events from "../data/events.js"
 
 class About extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.timeline = React.createRef()
     this.events = React.createRef()
     this.articles = React.createRef()
