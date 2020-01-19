@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 class ProjectList extends React.Component {
   render() {
@@ -10,24 +11,24 @@ class ProjectList extends React.Component {
             <h3>{this.props.title}</h3>
             <div className="project__icons">
               {this.props.github && (
-                <a
+                <OutboundLink
                   href={this.props.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa fa-github" />
-                  <span className="sr-only">Github</span>
-                </a>
+                  <span className="sr-only">{this.props.title} Github</span>
+                </OutboundLink>
               )}
               {this.props.url && (
-                <a
+                <OutboundLink
                   href={this.props.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa fa-external-link" />
-                  <span className="sr-only">External link</span>
-                </a>
+                  <span className="sr-only">{this.props.title}</span>
+                </OutboundLink>
               )}
             </div>
           </div>

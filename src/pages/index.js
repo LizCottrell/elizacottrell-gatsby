@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import "../styles/main.scss"
 
 import Layout from "../components/Layout"
@@ -17,13 +18,13 @@ const IndexPage = () => (
             I’m a <strong>front end developer</strong>,{" "}
             <strong>designer</strong>, and <strong>former archaeologist</strong>{" "}
             from Philadelphia. I work as a full stack software developer at{" "}
-            <a
+            <OutboundLink
               href="https://www.thinkcompany.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Think Company
-            </a>{" "}
+            </OutboundLink>{" "}
             in Philly. I also continue to work with the archaeology community on
             freelance projects creating interpretive signs and laying out
             scientific reports.
