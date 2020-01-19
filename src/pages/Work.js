@@ -1,6 +1,6 @@
 import React from "react"
-import ProjectList from "../components/ProjectList";
-import projects from "../data/projects.js";
+import ProjectList from "../components/ProjectList"
+import projects from "../data/projects.js"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -27,7 +27,11 @@ const Work = () => (
           As <strong>web designer</strong>, I create end-to-end experiences
           addressing challenges, goals and strategies, as well as brand refresh,
           app planning and design iterations. The{" "}
-          <a href="https://openforge.io/juntoscope/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://openforge.io/juntoscope/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Juntoscope case study
           </a>{" "}
           showcases my userflow and wireframe creation for a team estimation app
@@ -52,7 +56,7 @@ const Work = () => (
                 development={project.development}
                 text={project.text}
               />
-            );
+            )
           })}
         </ul>
       </section>

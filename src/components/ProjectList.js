@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 class ProjectList extends React.Component {
   render() {
@@ -10,13 +10,21 @@ class ProjectList extends React.Component {
             <h3>{this.props.title}</h3>
             <div className="project__icons">
               {this.props.github && (
-                <a href={this.props.github} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={this.props.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-github" />
                   <span className="sr-only">Github</span>
                 </a>
               )}
               {this.props.url && (
-                <a href={this.props.url} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={this.props.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-external-link" />
                   <span className="sr-only">External link</span>
                 </a>
@@ -30,8 +38,8 @@ class ProjectList extends React.Component {
           </ul>
         </div>
       </li>
-    );
+    )
   }
 }
 
-export default ProjectList;
+export default ProjectList

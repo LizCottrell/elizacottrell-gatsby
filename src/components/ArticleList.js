@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 class ArticleList extends React.Component {
   render() {
@@ -10,8 +10,8 @@ class ArticleList extends React.Component {
           <p>{this.props.date}</p>
         </a>
       </li>
-    );
+    )
   }
 }
 
-export default ArticleList;
+export default ArticleList

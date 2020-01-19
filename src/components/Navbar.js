@@ -1,36 +1,27 @@
-import React from "react";
+import React from "react"
 
 import { Link } from "gatsby"
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/icons/logo.png"
 
 function Navbar() {
   return (
     <nav className="nav__wrapper">
       <div className="nav container">
         <div className="nav__brand nav__list">
-          <Link className="nav__list-item" to='/'>
+          <Link className="nav__list-item" to="/">
             <img src={logo} className="nav__brand-icon" alt="" />
             Eliza Cottrell <span className="sr-only">Home</span>
           </Link>
         </div>
 
         <div className="nav__list nav__list--links">
-          <Link
-            className="nav__list-item"
-            to="/About"
-          >
+          <Link className="nav__list-item" to="/About">
             About me
           </Link>
-          <Link
-            className="nav__list-item"
-            to="/Work"
-          >
+          <Link className="nav__list-item" to="/Work">
             Work
           </Link>
-          <Link
-            className="nav__list-item"
-            to={`/Contact`}
-          >
+          <Link className="nav__list-item" to={`/Contact`}>
             Contact
           </Link>
         </div>
@@ -66,7 +57,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
