@@ -2,6 +2,7 @@ import React from "react"
 import ProjectList from "../components/projectList"
 import projects from "../data/projects.js"
 
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -43,6 +44,11 @@ const Work = () => (
 
       <section>
         <h2>Featured Projects</h2>
+        <p>
+          <strong>Please note:</strong> much of my work is proprietary - if you
+          are looking for in-depth samples or specific technologies, please{" "}
+          <Link to={`/contact`}>contact me</Link>.
+        </p>
         <ul className="projectlist">
           {projects.map((project, index) => {
             return (

@@ -3,7 +3,6 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ArticleList from "../components/articleList"
-// import Pills from "../../components/Pills";
 import timeline from "../data/timeline.js"
 import articles from "../data/articles.js"
 import events from "../data/events.js"
@@ -11,6 +10,7 @@ import events from "../data/events.js"
 class About extends Component {
   constructor(props) {
     super(props)
+    this.top = React.createRef()
     this.timeline = React.createRef()
     this.events = React.createRef()
     this.articles = React.createRef()
@@ -24,7 +24,7 @@ class About extends Component {
     return (
       <Layout>
         <SEO title="About" />
-        <div className="about container">
+        <div className="about container" ref={this.top}>
           <section>
             <header className="about__header">
               <h1>About me</h1>
@@ -100,7 +100,18 @@ class About extends Component {
           </section>
 
           <section id="timeline" ref={this.timeline}>
-            <h2>Timeline</h2>
+            <header>
+              <h2>Timeline</h2>
+              <button
+                className="button-icon"
+                onClick={() => {
+                  this.scroll(this.top)
+                }}
+              >
+                <i className="fa fa-arrow-up" />
+                <span className="sr-only">Back to top</span>
+              </button>
+            </header>
             <ul className="timeline__list">
               {timeline.map((milestone, index) => {
                 return (
@@ -116,7 +127,18 @@ class About extends Component {
           </section>
 
           <section id="articles" ref={this.articles}>
-            <h2>Articles</h2>
+            <header>
+              <h2>Articles</h2>
+              <button
+                className="button-icon"
+                onClick={() => {
+                  this.scroll(this.top)
+                }}
+              >
+                <i className="fa fa-arrow-up" />
+                <span className="sr-only">Back to top</span>
+              </button>
+            </header>
             <ul className="articlelist">
               {articles.map((article, index) => {
                 return (
@@ -133,7 +155,18 @@ class About extends Component {
           </section>
 
           <section id="events" ref={this.events}>
-            <h2>Events</h2>
+            <header>
+              <h2>Events</h2>
+              <button
+                className="button-icon"
+                onClick={() => {
+                  this.scroll(this.top)
+                }}
+              >
+                <i className="fa fa-arrow-up" />
+                <span className="sr-only">Back to top</span>
+              </button>
+            </header>
             <ul className="articlelist">
               {events.map((event, index) => {
                 return (

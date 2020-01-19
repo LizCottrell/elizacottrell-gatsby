@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `elizacottrell.com`,
-    description: `Elizabeth Cottrell's portfolio website`,
-    author: `Eliza`,
+    description: `Elizabeth Cottrell's portfolio website. Eliza is a former archaeologist and self-taught web developer & designer from Philadelphia currently working as a full stack software developer at Think Company.`,
+    author: `Elizabeth Cottrell`,
   },
   plugins: [
     {

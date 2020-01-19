@@ -1,3 +1,14 @@
+.about section header {
+  display: flex;
+  justify-content: space-between;
+
+  .button-icon {
+    align-self: start;
+    font-size: 1.5em;
+    padding: 0 5px;
+  }
+}
+
 .about__header {
   align-items: flex-start;
   display: flex;
