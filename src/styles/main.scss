@@ -1,0 +1,19 @@
+// @import "~font-awesome/css/font-awesome.css";
+@import "./base/all";
+
+// shared components
+@import "../components/styles/Layout";
+@import "../components/styles/Navbar";
+@import "../components/styles/Footer";
+@import "../components/styles/ProjectList";
+@import "../components/styles/ArticleList";
+
+// pages
+@import "../pages/styles/index";
+@import "../pages/styles/About";
+@import "../pages/styles/Work";
+@import "../pages/styles/Contact";
+
+#___gatsby, #gatsby-focus-wrapper {
+  height: 100vh;
+}

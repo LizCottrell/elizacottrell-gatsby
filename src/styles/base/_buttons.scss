@@ -1,0 +1,29 @@
+.button {
+  color: $white;
+  background: $purple;
+  border: 1px solid $purple;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 1.4em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 10px auto;
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  &:hover:enabled {
+    background: $white;
+    color: $purple;
+    text-decoration: none;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.button-link {
+  @extend a;
+  border: none;
+  padding: 0;
+}

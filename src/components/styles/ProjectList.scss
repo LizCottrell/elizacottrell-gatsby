@@ -1,0 +1,85 @@
+.project {
+  align-items: center;
+  box-shadow: 0 2px 0 0 $gray-5;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 15px;
+
+  @media (max-width: $sm) {
+    display: block;
+  }
+
+  img {
+    margin-right: 30px;
+    max-height: 170px;
+    max-width: 170px;
+    height: 170px;
+    width: 100%;
+
+    @media (max-width: $sm) {
+      margin: 0 auto 30px;
+      display: block;
+    }
+  }
+
+  h3 {
+    color: $gray-1;
+    flex-grow: 1;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.3em;
+    margin: 0 0 10px;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .project__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project__icons {
+    align-items: flex-start;
+    display: flex;
+    margin-top: -5px;
+
+    a {
+      border-radius: 3px;
+      color: $gray-2;
+      font-size: 1.25em;
+      line-height: 1.25em;
+      padding: 5px 8px;
+      transition: 0.2s ease;
+
+      &:hover {
+        background: rgba($teal, 0.15);
+        color: $gray-1;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .project__pills {
+    align-items: flex-start;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border: 1px solid $gray-4;
+      color: $gray-2;
+      font-size: 0.4em;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 0.5em;
+      margin: 0 10px 0 0;
+      padding: 10px 12px;
+      text-transform: uppercase;
+    }
+  }
+}
