@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import ArticleList from "../components/ArticleList"
 // import Pills from "../../components/Pills";
 import timeline from "../data/timeline.js"

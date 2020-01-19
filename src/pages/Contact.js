@@ -1,8 +1,9 @@
 import React from "react"
 import pdf from "../assets/resume.pdf"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const Work = () => (
   <Layout>
@@ -23,6 +24,13 @@ const Work = () => (
             target="_blank"
             rel="noopener noreferrer"
             className="button"
+            onClick={e => {
+              trackCustomEvent({
+                category: "Button",
+                action: "Click",
+                label: "Viewed Resume",
+              })
+            }}
           >
             View Resume
           </a>

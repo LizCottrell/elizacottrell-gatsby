@@ -3,7 +3,7 @@ import ProjectList from "../components/ProjectList"
 import projects from "../data/projects.js"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const Work = () => (
   <Layout>
