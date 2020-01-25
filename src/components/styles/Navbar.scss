@@ -1,6 +1,6 @@
 .nav__wrapper {
   background: $white;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   padding: 15px 0;
   position: fixed;
   width: 100%;
@@ -46,6 +46,7 @@
     margin-left: 5px;
     padding: 5px 10px;
     transition: 0.2s ease;
+    text-decoration: none;
 
     i {
       font-size: 1.25em;

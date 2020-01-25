@@ -13,6 +13,7 @@
   text-align: center;
   text-transform: uppercase;
   transition: 0.2s ease;
+  text-decoration: none;
   &:hover:enabled {
     background: $white;
     color: $purple;

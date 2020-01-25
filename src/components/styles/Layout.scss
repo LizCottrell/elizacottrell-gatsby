@@ -52,10 +52,11 @@ p {
 a {
   color: $purple;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
+  transition: all 0.5s ease;
   &:hover {
-    color: darken($purple, 0.2);
-    text-decoration: underline;
+    color: $purple-dark;
+    text-decoration: none;
   }
 }
 

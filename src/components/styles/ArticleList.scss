@@ -8,6 +8,7 @@
     display: flex;
     padding: 18px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
 
     @media (max-width: $sm) {
       padding: 18px 5px;
