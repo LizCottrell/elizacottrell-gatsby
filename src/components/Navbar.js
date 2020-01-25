@@ -1,16 +1,16 @@
 import React from "react"
-
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import logo from "../assets/icons/logo.png"
 
-function Navbar() {
+const Navbar = ({ siteTitle }) => {
   return (
     <nav className="nav__wrapper">
       <div className="nav container">
         <div className="nav__brand nav__list">
           <Link className="nav__list-item" to="/">
             <img src={logo} className="nav__brand-icon" alt="" />
-            Eliza Cottrell <span className="sr-only">Home</span>
+            {siteTitle} <span className="sr-only">Home</span>
           </Link>
         </div>
 
@@ -58,6 +58,14 @@ function Navbar() {
       </div>
     </nav>
   )
+}
+
+Navbar.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Navbar.defaultProps = {
+  siteTitle: ``,
 }
 
 export default Navbar

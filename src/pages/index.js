@@ -13,11 +13,11 @@ const IndexPage = () => (
 
       <div className="home container">
         <section>
-          <h1>Hi, I'm Eliza</h1>
+          <h1>Hi, I'm Elizabeth</h1>
           <p>
             I’m a <strong>front end developer</strong>,{" "}
             <strong>designer</strong>, and <strong>former archaeologist</strong>{" "}
-            from Philadelphia. I work as a full stack software developer at{" "}
+            living in Philadelphia. I work at{" "}
             <OutboundLink
               href="https://www.thinkcompany.com/"
               target="_blank"
@@ -25,9 +25,9 @@ const IndexPage = () => (
             >
               Think Company
             </OutboundLink>{" "}
-            in Philly. I also continue to work with the archaeology community on
-            freelance projects creating interpretive signs and laying out
-            scientific reports.
+            as a full stack software developer. I also work with archaeologists,
+            historians, scientists, and non-profit organizations in a design and
+            digital capacity.
           </p>
           <Link className="home__button button" to="/about">
             Read more

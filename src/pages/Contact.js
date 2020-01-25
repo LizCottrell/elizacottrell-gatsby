@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import pdf from "../assets/resume.pdf"
+import pdf from "../assets/resume_cottrell2020.pdf"
 import pdfImg from "../assets/images/resume.png"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import classNames from "classnames"
