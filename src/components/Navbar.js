@@ -4,15 +4,12 @@ import { Link } from "gatsby"
 import logo from "../assets/icons/logo.png"
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     let prevScrollpos = window.pageYOffset
     window.onscroll = () => {
       let currentScrollPos = window.pageYOffset
-      if (prevScrollpos > currentScrollPos) {
+      console.log(currentScrollPos)
+      if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
         document.getElementById("navbar").classList.add("nav--show")
         document.getElementById("navbar").classList.remove("nav--hide")
       } else {
