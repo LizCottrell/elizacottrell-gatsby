@@ -3,7 +3,6 @@ import pdf from "../assets/resume_cottrell2020.pdf"
 import pdfImg from "../assets/images/resume.png"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import classNames from "classnames"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
