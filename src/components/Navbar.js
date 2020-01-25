@@ -4,8 +4,21 @@ import { Link } from "gatsby"
 import logo from "../assets/icons/logo.png"
 
 const Navbar = ({ siteTitle }) => {
+  let prevScrollpos = window.pageYOffset
+  window.onscroll = () => {
+    let currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").classList.add("nav--show")
+      document.getElementById("navbar").classList.remove("nav--hide")
+    } else {
+      document.getElementById("navbar").classList.remove("nav--show")
+      document.getElementById("navbar").classList.add("nav--hide")
+    }
+    prevScrollpos = currentScrollPos
+  }
+
   return (
-    <nav className="nav__wrapper">
+    <nav id="navbar" className="nav__wrapper">
       <div className="nav container">
         <div className="nav__brand nav__list">
           <Link className="nav__list-item" to="/">
@@ -27,7 +40,7 @@ const Navbar = ({ siteTitle }) => {
         </div>
 
         <div className="nav__list">
-          <a
+          {/* <a
             className="nav__list-item"
             href="https://twitter.com/_elizacottrell"
             target="_blank"
@@ -35,7 +48,7 @@ const Navbar = ({ siteTitle }) => {
           >
             <i className="fa fa-twitter" />
             <span className="sr-only">Twitter</span>
-          </a>
+          </a> */}
           <a
             className="nav__list-item"
             href="https://github.com/LizCottrell"

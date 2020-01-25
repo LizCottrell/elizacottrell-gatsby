@@ -37,8 +37,10 @@
   }
 
   .nav__list-item {
+    align-items: center;
     border-radius: 3px;
     color: $gray-2;
+    display: flex;
     font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -58,6 +60,10 @@
       color: $gray-1;
       text-decoration: none;
     }
+
+    @media (max-width: $md) {
+      margin-left: 0;
+    }
   }
 
   .nav__list--links {
@@ -66,5 +72,21 @@
       order: 2;
       width: 100%;
     }
+  }
+}
+
+@media (max-width: $sm) {
+  .nav--show {
+    height: 85px;
+    opacity: 1;
+    transition: visibility 0.3s, opacity 0.2s, height 0.3s ease;
+    visibility: visible;
+  }
+
+  .nav--hide {
+    height: 40px;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.05s, height 0.3s ease;
+    visibility: hidden;
   }
 }
