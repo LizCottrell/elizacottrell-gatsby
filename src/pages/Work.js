@@ -13,40 +13,29 @@ const Work = () => (
       <section>
         <h1>Work</h1>
         <p>
-          As a <strong>web developer</strong>, I contribute to large scale
-          content &amp; API driven applications for clients ranging from
-          financial services to retail to non-profit. I started out as a UI
-          developer creating custom emails, campaign-driven single page sites,
-          HTML5 animations, and managing CMS content &amp; theming for a digital
-          agency. I now work with React and Redux incorporating single page
-          applications into .NET environments on large applications. This
-          includes developing pattern libraries, performing test driven
-          development, mitigating for accessibility in javascript frameworks,
-          and cross-browser compatibility.
+          As a <strong>web developer</strong>, I contribute to large-scale
+          content &amp; API-driven applications for clients ranging from
+          financial services to retail to non-profit. My start as a UI developer
+          began with custom emails, single page sites, HTML5 animations, and
+          managing CMS content &amp; theming at a digital agency. Currently, I
+          work with React and Redux within .NET applications. My work includes
+          pattern libraries development, test-driven development, accessibility,
+          and cross-browser compatibility testing.
         </p>
         <p>
-          As <strong>web designer</strong>, I create end-to-end experiences
+          As a <strong>web designer</strong>, I create end-to-end experiences
           addressing challenges, goals and strategies, as well as brand refresh,
-          app planning and design iterations. The{" "}
-          <a
-            href="https://openforge.io/juntoscope/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Juntoscope case study
-          </a>{" "}
-          showcases my userflow and wireframe creation for a team estimation app
-          that integrates with project management software. And the Batala
-          Philadelphia website, seen below, is an example of my design and
-          implementation of a single page site for a non-profit.
+          app planning and design iterations. The Batala Philadelphia website,
+          seen below, is an example of my design and implementation of a single
+          page site for a non-profit.
         </p>
       </section>
 
       <section>
         <h2>Featured Projects</h2>
         <p>
-          <strong>Please note:</strong> much of my work is proprietary - if you
-          are looking for in-depth samples or specific technologies, please{" "}
+          <strong>Please note:</strong> all non-freelance work is proprietary -
+          so if you are looking for recent work, please{" "}
           <Link to={`/contact`}>contact me</Link>.
         </p>
         <ul className="projectlist">

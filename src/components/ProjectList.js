@@ -5,7 +5,17 @@ class ProjectList extends React.Component {
   render() {
     return (
       <li className="project">
-        <img src={this.props.image} alt="" />
+        {this.props.url ? (
+          <OutboundLink
+            href={this.props.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={this.props.image} alt="" />
+          </OutboundLink>
+        ) : (
+          <img src={this.props.image} alt="" />
+        )}
         <div>
           <div className="project__header">
             <h3>{this.props.title}</h3>
