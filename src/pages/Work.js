@@ -19,8 +19,8 @@ const Work = () => (
           began with custom emails, single page sites, HTML5 animations, and
           managing CMS content &amp; theming at a digital agency. Currently, I
           work with React and Redux within .NET applications. My work includes
-          pattern libraries development, test-driven development, accessibility,
-          and cross-browser compatibility testing.
+          web accessibility, cross-browser compatibility, and pattern library
+          development.
         </p>
         <p>
           As a <strong>web designer</strong>, I create end-to-end experiences
@@ -35,7 +35,7 @@ const Work = () => (
         <h2>Featured Projects</h2>
         <p>
           <strong>Please note:</strong> all non-freelance work is proprietary -
-          so if you are looking for recent work, please{" "}
+          if you have any questions about recent work, please{" "}
           <Link to={`/contact`}>contact me</Link>.
         </p>
         <ul className="projectlist">

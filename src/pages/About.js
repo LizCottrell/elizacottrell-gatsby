@@ -62,23 +62,18 @@ class About extends Component {
                   this.scroll(this.timeline)
                 }}
               >
-                self-taught web developer &amp; designer
+                self-taught full-stack front end developer
               </button>{" "}
-              from Philadelphia currently working as a full stack software
-              developer. These days, I collaborate daily with cross-functional
-              teams of technical leads, developers, UX designers, visual
-              designers, and researchers. I work with HTML, CSS, and JavaScript
-              creating single page applications in an agile environment.
+              from Philadelphia. I work with HTML, CSS, and JavaScript creating
+              accessible, performant, and accessible single-page applications in
+              an agile environment. I get to collaborate daily with
+              cross-functional teams of technical leads, developers, UX
+              designers, and researchers.
             </p>
             <p>
               My transition into web development began with community
-              organizations and local tech meetups like Girl Develop It in
-              addition to teaching myself how to code on nights and weekends. I
-              quickly recognized there is more value in a classroom, lecture,
-              panel or event as opposed to sitting alone in front of a computer
-              trying to hack it on my own. Because of the enormous amount of
-              support I received when I started out, I began giving back as soon
-              as I could. Now{" "}
+              organizations and local tech meetups like Girl Develop It. I
+              taught myself how to code on nights and weekends. Now{" "}
               <button
                 className="button-link"
                 onClick={() => {
@@ -88,14 +83,16 @@ class About extends Component {
                 I teach, speak, volunteer, TA, and organize events in the tech
                 community
               </button>
-              .
+              . I found there more value in a classroom, lecture, panel or event
+              as opposed to sitting alone in front of a computer trying to hack
+              it on my own. Because of the enormous amount of support I received
+              when I started out, I began giving back as soon as I could.
             </p>
             <p>
-              This site is intended to show my work and transition from
-              archaeologist to technologist. Throughout this transition, I've
-              discovered my passion-projects are web accessibility and
-              motivating people of <em>all</em> backgrounds looking to break
-              into tech.
+              This site is intended to give a small window into my transition
+              from archaeologist to technologist. Throughout this career switch,
+              I've discovered my passion projects are web accessibility and
+              motivating people of all backgrounds looking to break into tech.
             </p>
           </section>
 

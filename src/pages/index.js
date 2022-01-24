@@ -24,7 +24,7 @@ const IndexPage = () => (
             >
               Think Company
             </OutboundLink>{" "}
-            as a full stack software developer. I also work with archaeologists,
+            as a Senior UX Engineer. I also work with archaeologists,
             historians, scientists, and non-profit organizations in a design and
             digital capacity.
           </p>
