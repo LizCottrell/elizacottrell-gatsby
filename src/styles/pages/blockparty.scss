@@ -1,4 +1,4 @@
-// color variables
+// variables
 
 $blue: #4391ce;
 $blue-light: #99d9e9;
@@ -9,22 +9,20 @@ $orange: #f69321;
 $tan: #f6dcc4;
 $white: #fff;
 
+$sm-md: 700px;
+
 // global blockparty styles
 
 .blockparty {
   display: flex;
   flex-direction: column;
-  font-family: "Nanum Pen Script", cursive;
-  font-size: 1.6em;
+  font-family: "Nanum Pen Script", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   align-items: center;
   padding: 5vw 0;
 
-  @media (max-width: $sm) {
+  @media (max-width: $sm-md) {
     padding: 10vw 0 30vw;
-  }
-
-  h2 {
-    text-transform: uppercase;
   }
 
   section {
@@ -34,11 +32,41 @@ $white: #fff;
       display: flex;
       justify-content: space-between;
 
+      // back to top button
       .button-icon {
         align-self: start;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         padding: 0 5px;
       }
+    }
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 20px 20px 0;
+    margin: 0;
+
+    @media (max-width: $sm-md) {
+      padding-right: 0;
+    }
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+  }
+
+  p,
+  ul,
+  table {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+
+    @media (max-width: $sm-md) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
     }
   }
 
@@ -51,13 +79,25 @@ $white: #fff;
     }
   }
 
+  hr {
+    border-color: $orange;
+  }
+
   .cta {
     text-align: center;
     text-transform: uppercase;
+    line-height: 1.6rem;
+    margin-bottom: 3vw;
+
+    span {
+      @media (max-width: $sm) {
+        display: none;
+      }
+    }
   }
 }
 
-// header
+// header (includes nav)
 
 .blockparty-header {
   align-items: flex-start;
@@ -66,26 +106,65 @@ $white: #fff;
   justify-content: space-between;
   margin: 0 0 40px 0;
 
-  @media (max-width: $md) {
+  @media (max-width: $sm-md) {
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
   }
 
-  h1 {
+  .blockparty-nav {
+    align-items: center;
+    display: flex;
     margin: 0;
 
-    @media (max-width: $md) {
-      display: none;
-    }
-  }
-
-  .pills {
-    button:hover,
-    button:focus {
-      background: $yellow;
-    }
-
-    @media (max-width: $md) {
+    @media (max-width: $sm) {
+      flex-direction: column;
       justify-content: center;
+      width: 100%;
+    }
+
+    .blockparty-nav--btn {
+      margin-left: 10px;
+      background: #eeeeee;
+      border: none;
+      border-radius: 5px;
+      color: #1b1b1b;
+      cursor: pointer;
+      font-size: 1.6em;
+      font-weight: 300;
+      padding: 8px 18px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background: $yellow;
+        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25),
+          0 5px 5px rgba(0, 0, 0, 0.22);
+        text-decoration: none;
+      }
+
+      @media (max-width: $sm) {
+        margin: 0 0 15px 5px;
+      }
+    }
+
+    .blockparty-nav--social {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      margin-left: 20px;
+
+      i {
+        font-size: 2.4rem;
+      }
     }
   }
 }
@@ -97,7 +176,7 @@ $white: #fff;
   text-transform: uppercase;
   width: 90vw;
 
-  @media (max-width: $md) {
+  @media (max-width: $sm-md) {
     flex-direction: column;
     width: 95vw;
   }
@@ -118,7 +197,7 @@ $white: #fff;
     font-size: 4vw;
     line-height: 4vw;
 
-    @media (max-width: $md) {
+    @media (max-width: $sm-md) {
       font-size: 10vw;
       line-height: 10vw;
     }
@@ -127,15 +206,15 @@ $white: #fff;
       font-size: 2vw;
       line-height: 2vw;
 
-      @media (max-width: $md) {
-        font-size: 5vw;
-        line-height: 5vw;
+      @media (max-width: $sm-md) {
+        font-size: 5.75vw;
+        line-height: 5.75vw;
       }
 
       &:last-child {
         margin: 2vw 0;
 
-        @media (max-width: $md) {
+        @media (max-width: $sm-md) {
           margin: 5vw 0;
         }
       }
@@ -151,7 +230,7 @@ $white: #fff;
     margin: 0 -1vw 0 0;
     z-index: 2;
 
-    @media (max-width: $md) {
+    @media (max-width: $sm-md) {
       margin: 0 0 -3vw 0;
       width: 100%;
     }
@@ -165,7 +244,7 @@ $white: #fff;
     padding: 5vw;
     z-index: 1;
 
-    @media (max-width: $md) {
+    @media (max-width: $sm-md) {
       background-image: url("/blockparty-2-mobile.png");
       margin: -5vw 0 0 0;
       padding: 10vw;
@@ -178,6 +257,11 @@ $white: #fff;
     width: 18vw;
     margin: 0 auto;
     display: block;
+    transform: rotate(10deg);
+
+    @media (max-width: $sm-md) {
+      width: 50vw;
+    }
   }
 }
 
@@ -187,19 +271,12 @@ $white: #fff;
   table {
     border-spacing: 0;
     border-collapse: collapse;
-    font-size: 1.6rem;
-    line-height: 1.4rem;
 
     td {
       padding: 3vw 2vw;
 
       ul {
         padding-left: 15px;
-
-        li {
-          font-size: 1.6rem;
-          line-height: 1.4rem;
-        }
       }
 
       &.last {
@@ -254,7 +331,34 @@ $white: #fff;
 // faq
 
 .blockparty-faq {
+  ul {
+    @media (max-width: $sm-md) {
+      padding-left: 30px;
+    }
+  }
+
   li span {
     text-decoration: underline;
+  }
+}
+
+// footer
+
+.blockparty-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw 0;
+  width: 100%;
+
+  .button-icon {
+    align-self: start;
+    font-size: 1.5rem;
+    padding: 0 5px;
+  }
+
+  .sun {
+    max-width: 200px;
+    transform: rotate(-10deg);
+    width: 100%;
   }
 }

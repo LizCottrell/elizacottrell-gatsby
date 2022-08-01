@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-
+import "../styles/main.scss"
 import SEO from "../components/seo"
 import blockparty1 from "../assets/images/blockparty-1.png"
-import blockparty2 from "../assets/images/blockparty-2.png"
 import sun from "../assets/images/sun.png"
 
 class BlockParty extends Component {
@@ -10,6 +9,7 @@ class BlockParty extends Component {
     super(props)
     this.top = React.createRef()
     this.party = React.createRef()
+    this.rsvp = React.createRef()
     this.itinerary = React.createRef()
     this.faq = React.createRef()
   }
@@ -22,33 +22,66 @@ class BlockParty extends Component {
       <main className="blockparty" ref={this.top}>
         <SEO title="Block Party" />
         <header className="blockparty-header container">
-          <h1>Block Party</h1>
-          <div className="pills">
-            <button
-              onClick={() => {
-                this.scroll(this.party)
-              }}
-            >
-              Party Info
-            </button>
-            <button
-              onClick={() => {
-                this.scroll(this.itinerary)
-              }}
-            >
-              Itinerary
-            </button>
-            <button
-              onClick={() => {
-                this.scroll(this.faq)
-              }}
-            >
-              FAQ
-            </button>
-          </div>
+          <h1>Block Party!</h1>
+          <nav className="blockparty-nav">
+            <div className="blockparty-nav--btn-list">
+              <button
+                className="blockparty-nav--btn"
+                onClick={() => {
+                  this.scroll(this.party)
+                }}
+              >
+                Party Info
+              </button>
+              <button
+                className="blockparty-nav--btn"
+                onClick={() => {
+                  this.scroll(this.rsvp)
+                }}
+              >
+                RSVP
+              </button>
+              <button
+                className="blockparty-nav--btn"
+                onClick={() => {
+                  this.scroll(this.itinerary)
+                }}
+              >
+                Itinerary
+              </button>
+              <button
+                className="blockparty-nav--btn"
+                onClick={() => {
+                  this.scroll(this.faq)
+                }}
+              >
+                FAQ
+              </button>
+            </div>
+            <div className="blockparty-nav--social">
+              <a
+                href="https://www.instagram.com/norrisneighbors/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-instagram" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="mailto:myblockcaptain@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-envelope-o" />
+                <span className="sr-only">Email</span>
+              </a>
+            </div>
+          </nav>
         </header>
 
-        <p className="container cta">🙌 Let's get ready to rock the block 🙌</p>
+        <p className="container cta">
+          <span>🙌</span> Let's get ready to rock the block! <span>🙌</span>
+        </p>
 
         <div className="blockparty-hero" ref={this.party}>
           <img
@@ -60,16 +93,22 @@ class BlockParty extends Component {
             className="blockparty-hero--right"
             // style={{ backgroundImage: `url(${blockparty2})` }}
           >
-            <p>With games, food, music, slip &amp; slide, + summer fun</p>
+            <p>With games, food, music, bounce house + summer fun</p>
             <ul>
               <li>SAT 8/13</li>
               <li>8AM - 8:30PM</li>
               <li className="small">*RAIN DATE: SUN 8/14</li>
               <li className="small">
-                RSVP with your block captains (Lisa @2520 &amp; Karen @2524) at{" "}
-                <a href="mailto:myblockcaptain@gmail.com">
-                  myblockcaptain@gmail.com
-                </a>
+                <button
+                  className="button-link"
+                  onClick={() => {
+                    this.scroll(this.rsvp)
+                  }}
+                >
+                  RSVP with your block captains
+                </button>{" "}
+                <br /> (Lisa @2520 &amp; Karen @2524) <br /> at
+                myblockcaptain@gmail.com
               </li>
             </ul>
             <img
@@ -79,6 +118,51 @@ class BlockParty extends Component {
             />
           </div>
         </div>
+
+        <section className="blockparty-rsvp container" ref={this.rsvp}>
+          <header>
+            <h2>RSVP</h2>
+            <button
+              className="button-icon"
+              onClick={() => {
+                this.scroll(this.top)
+              }}
+            >
+              <i className="fa fa-arrow-up" />
+              <span className="sr-only">Back to top</span>
+            </button>
+          </header>
+          <p>
+            Please RSVP via email to:{" "}
+            <a href="mailto:myblockcaptain@gmail.com">
+              myblockcaptain@gmail.com
+            </a>{" "}
+            by WEDNESDAY - AUGUST 3RD
+          </p>
+          <p>Please include:</p>
+          <ul>
+            <li>Your address</li>
+            <li>
+              A general headcount of how many from your household will be
+              participating as well as expected family/friends
+            </li>
+            <li>
+              How many children and the age ranges of children attending (for
+              activity-planning purposes)
+            </li>
+            <li>
+              Names of heads of household (for nametag purposes) - no need to
+              supply names of guests
+            </li>
+          </ul>
+          <br />
+          <hr />
+          <br /> <br />
+          <p>
+            <u>Money will be collected on THURSDAY - AUGUST 4th</u>
+          </p>
+          <p>Amount to be determined (should be $50 or less)</p>
+        </section>
 
         <section
           className="blockparty-itinerary container"
@@ -104,7 +188,7 @@ class BlockParty extends Component {
           <p>
             Thanks to Fishtown Pharmacy for providing face masks and thanks to
             the City of Philadelphia for providing neighbors with COVID test
-            kits. Let's stay safe today!
+            kits (kits will be distributed on 8/12). Let's stay safe today!
           </p>
 
           <table>
@@ -124,11 +208,7 @@ class BlockParty extends Component {
                       Please sweep/clean your pavement &amp; sidewalk and help
                       with street clean-up.
                     </li>
-                    <li>
-                      ENJOY: Coffee (courtesy of ReAnimator), Donuts &amp;
-                      Munchkins (courtesy of Dunkin Donuts) and Fruit (courtesy
-                      of Riverwards Produce)
-                    </li>
+                    <li>ENJOY: Coffee, Donuts &amp; Fruit</li>
                   </ul>
                 </td>
               </tr>
@@ -137,12 +217,26 @@ class BlockParty extends Component {
                 <td>
                   <ul>
                     <li>
-                      TIME TO SET-UP! Set-up your umbrellas, chairs &amp; other
-                      items for the day!
+                      TIME TO SET-UP FOR THE DAY! Set-up your umbrellas, chairs
+                      &amp; other items for the day!
                     </li>
                     <li>
-                      Take a photo in front of our backdrop! Tag
-                      #NorrisNeighbors for our IG page.
+                      Take a photo in front of our backdrop! Tag{" "}
+                      <a
+                        href="https://www.instagram.com/explore/tags/norrisneighbors/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        #NorrisNeighbors
+                      </a>{" "}
+                      for{" "}
+                      <a
+                        href="https://www.instagram.com/norrisneighbors/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        our IG page.
+                      </a>
                     </li>
                     <li>
                       Name tags will be distributed for everyone (thanks to
@@ -155,8 +249,11 @@ class BlockParty extends Component {
                 <td>10:00AM to 11:00AM</td>
                 <td>
                   <ul>
-                    <li>Neighbors receive helpful info packets.</li>
-                    <li>11:00AM - WATER SLIDE ARRIVES!</li>
+                    <li>11:00AM - BOUNCE HOUSE FOR KIDS SET UP</li>
+                    <li>
+                      Fishtown Branch Free Library Card Applications &amp; Other
+                      Info Available
+                    </li>
                   </ul>
                 </td>
               </tr>
@@ -164,7 +261,9 @@ class BlockParty extends Component {
                 <td>11:00AM to 12:00PM</td>
                 <td>
                   <ul>
-                    <li>Face Painting Materials Available.</li>
+                    <li>
+                      Face Painting Materials &amp; Water Tattoos Available
+                    </li>
                     <li>
                       Child &amp; Adult Cornhole set-up for use - kids chalk,
                       bubbles, etc. available.
@@ -187,11 +286,20 @@ class BlockParty extends Component {
                 <td>
                   <ul>
                     <li>
-                      EVERYONE WELCOME TO A FREE HOTDOG (Special thanks Neighbor
-                      GRILLMASTERS - Ian, Derek &amp; Scott; hotdogs, plates,
-                      chips, pretzels, tastycakes &amp; water courtesy of IGA).
+                      EVERYONE WELCOME TO A FREE HOTDOG
+                      <br />
+                      <br />
+                      Special thanks Neighbor GRILLMASTERS - Ian, Derek &amp;
+                      Scott
+                      <br />
+                      <br />
+                      Our block is receiving 120 Hotdog Rolls &amp; 120
+                      Hamburger Rolls courtesy of Schmidts Rolls
+                      <br />
+                      <br />
+                      Hotdogs, plates, chips, pretzels, tastycakes &amp; water
+                      courtesy of IGA
                     </li>
-                    <li>DJ ARRIVES!</li>
                   </ul>
                 </td>
               </tr>
@@ -211,25 +319,17 @@ class BlockParty extends Component {
                 <td>
                   <ul>
                     <li>
-                      DIY Kid Wooden Kits - kids can make a Fishtown Tank!
-                      (courtesy of Home Depot)
+                      DIY Kid Wooden Kits - Fishtown kids can make a Fishtown
+                      Tank! (courtesy of Home Depot)
                     </li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>3:00PM</td>
+                <td>3:30PM</td>
                 <td>
                   <ul>
                     <li>Water Balloon Toss &amp; Limbo</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>5:30PM</td>
-                <td>
-                  <ul>
-                    <li>DJ Leaves ☹️</li>
                   </ul>
                 </td>
               </tr>
@@ -239,9 +339,9 @@ class BlockParty extends Component {
                   <ul>
                     <li>
                       BLOCK PARTY IS OFFICIALLY OVER - Thank you for
-                      participating!!! Time to break-down the set-ups &amp;
-                      clean up.
+                      participating!!!
                     </li>
+                    <li>Time to break-down the set-ups &amp; clean up</li>
                     <li>
                       8:30PM - Street opens back up to traffic, bus, pedestrians
                       &amp; parking
@@ -257,6 +357,8 @@ class BlockParty extends Component {
               </tr>
             </tbody>
           </table>
+          <br />
+          <p>To Be Added: DJ Start &amp; Finish Time</p>
         </section>
 
         <section className="blockparty-faq container" ref={this.faq}>
@@ -284,8 +386,8 @@ class BlockParty extends Component {
             <li>
               <span>HOW MUCH</span>: Amout to be determined based on number of
               houses participating - money will be collected (money will be used
-              for group things like waterslide, dunk tank, etc. - it's important
-              that everyone participating contribute
+              for group things like bounce house, dunk tank, etc. - it's
+              important that everyone participating contribute
             </li>
             <li>
               <span>PARKING</span>: Please park elsewhere the day before so we
@@ -337,15 +439,23 @@ class BlockParty extends Component {
             </li>
           </ul>
         </section>
-        <button
-          className="button-icon"
-          onClick={() => {
-            this.scroll(this.top)
-          }}
-        >
-          <i className="fa fa-arrow-up" />
-          <span className="sr-only">Back to top</span>
-        </button>
+
+        <footer className="blockparty-footer container">
+          <img
+            className="sun"
+            src={sun}
+            alt="Smiling sun giving a double thumbs-up"
+          />
+          <button
+            className="button-icon"
+            onClick={() => {
+              this.scroll(this.top)
+            }}
+          >
+            <i className="fa fa-arrow-up" />
+            <span className="sr-only">Back to top</span>
+          </button>
+        </footer>
       </main>
     )
   }

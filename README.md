@@ -63,8 +63,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 ## 💫 Deploy
 
-1. **Commit and push the latest** using `git commit -m "commit message"` and `git push`
+1. **Build** using the command `npm run build`
 
-2. **Deploy** using the command `npm run deploy`
+2. **Copy public folder to docs folder for GitHub pages** (must be done manually right now))
 
-3. **Update GitHub pages Settings** by re-adding the custom domain www.elizacottrell.com and **Save** for each deploy (hacky, but it works)
+3. **Commit and push the latest** using `git commit -m "commit message"` and `git push`
+
+4. **Deploy** using the command `npm run deploy`
+
+5. **Update GitHub pages Settings** by re-adding the custom domain www.elizacottrell.com and **Save** for each deploy (hacky, but it works)
