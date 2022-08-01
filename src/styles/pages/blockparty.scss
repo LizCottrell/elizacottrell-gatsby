@@ -1,0 +1,260 @@
+// color variables
+
+$blue: #4391ce;
+$blue-light: #99d9e9;
+$green: #0e9547;
+$yellow: #f2bf1a;
+$red: #f15a2b;
+$orange: #f69321;
+$tan: #f6dcc4;
+$white: #fff;
+
+// global blockparty styles
+
+.blockparty {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1.6em;
+  align-items: center;
+  padding: 5vw 0;
+
+  @media (max-width: $sm) {
+    padding: 10vw 0 30vw;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  section {
+    padding-top: 50px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+
+      .button-icon {
+        align-self: start;
+        font-size: 1.5em;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  a {
+    color: $red;
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($red, 10%);
+    }
+  }
+
+  .cta {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+// header
+
+.blockparty-header {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 40px 0;
+
+  @media (max-width: $md) {
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  .pills {
+    button:hover,
+    button:focus {
+      background: $yellow;
+    }
+
+    @media (max-width: $md) {
+      justify-content: center;
+    }
+  }
+}
+
+// hero (flier)
+
+.blockparty-hero {
+  display: flex;
+  text-transform: uppercase;
+  width: 90vw;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  p {
+    margin-bottom: 1vw;
+  }
+
+  p,
+  li {
+    font-size: 4vw;
+    line-height: 4vw;
+
+    @media (max-width: $md) {
+      font-size: 10vw;
+      line-height: 10vw;
+    }
+
+    &.small {
+      font-size: 2vw;
+      line-height: 2vw;
+
+      @media (max-width: $md) {
+        font-size: 5vw;
+        line-height: 5vw;
+      }
+
+      &:last-child {
+        margin: 2vw 0;
+
+        @media (max-width: $md) {
+          margin: 5vw 0;
+        }
+      }
+    }
+  }
+
+  .blockparty-hero--left,
+  .blockparty-hero--right {
+    width: 46vw;
+  }
+
+  .blockparty-hero--left {
+    margin: 0 -1vw 0 0;
+    z-index: 2;
+
+    @media (max-width: $md) {
+      margin: 0 0 -3vw 0;
+      width: 100%;
+    }
+  }
+
+  .blockparty-hero--right {
+    background-image: url("/blockparty-2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 0 0 -1vw;
+    padding: 5vw;
+    z-index: 1;
+
+    @media (max-width: $md) {
+      background-image: url("/blockparty-2-mobile.png");
+      margin: -5vw 0 0 0;
+      padding: 10vw;
+      width: 101%;
+      z-index: 3;
+    }
+  }
+
+  .sun {
+    width: 18vw;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+// itinerary
+
+.blockparty-itinerary {
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 1.6rem;
+    line-height: 1.4rem;
+
+    td {
+      padding: 3vw 2vw;
+
+      ul {
+        padding-left: 15px;
+
+        li {
+          font-size: 1.6rem;
+          line-height: 1.4rem;
+        }
+      }
+
+      &.last {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    thead tr:nth-child(6n + 1) td {
+      background-color: $white;
+    }
+
+    tr:nth-child(6n + 1) {
+      td {
+        background-color: lighten($blue, 40%);
+        border-bottom: 3px solid $blue;
+      }
+    }
+    tr:nth-child(6n + 2) {
+      td {
+        background-color: lighten($green, 60%);
+        border-bottom: 3px solid $green;
+      }
+    }
+    tr:nth-child(6n + 3) {
+      td {
+        background-color: lighten($yellow, 40%);
+        border-bottom: 3px solid $yellow;
+      }
+    }
+    tr:nth-child(6n + 4) {
+      td {
+        background-color: lighten($blue-light, 20%);
+        border-bottom: 3px solid $blue-light;
+      }
+    }
+    tr:nth-child(6n + 5) {
+      td {
+        background-color: lighten($red, 40%);
+        border-bottom: 3px solid $red;
+      }
+    }
+    tr:nth-child(6n + 6) {
+      td {
+        background-color: lighten($orange, 40%);
+        border-bottom: 3px solid $orange;
+      }
+    }
+  }
+}
+
+// faq
+
+.blockparty-faq {
+  li span {
+    text-decoration: underline;
+  }
+}
