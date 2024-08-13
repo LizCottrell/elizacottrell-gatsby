@@ -1,0 +1,525 @@
+// variables
+
+$blue: #2c68a4;
+$blueLight: #78b8d9;
+$blueDark: #131f38;
+$blueTop: linear-gradient(180deg, #0f1219, #37599d);
+$blueBottom: linear-gradient(180deg, #2c68a4, #131f38);
+$blueOpaque: rgba(19, 31, 56, 0.5);
+$whiteOpaque: rgba(255, 255, 255, 0.1);
+$pinkOpaque: rgba(253, 165, 167, 0.7);
+$white: #ffffff;
+$grey: #292929;
+$pink: #fda5a7;
+$pinkDark: #792c2e;
+$purple: #353b7c;
+
+$sm-md: 700px;
+
+$font-love: "Love Ya Like A Sister", -apple-system, BlinkMacSystemFont, Segoe UI,
+  Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+$font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+  Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+
+// global birthday styles
+
+.birthday {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  font-family: $font-nunito;
+  align-items: center;
+
+  section {
+    padding-top: 50px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+
+      // back to top button
+      .button-icon {
+        align-self: start;
+        font-size: 1.5rem;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  h1 {
+    font-family: $font-love;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+
+    @media (max-width: $sm-md) {
+      padding-right: 0;
+    }
+
+    .sub-heading {
+      display: block;
+      margin-top: 2rem;
+      font-size: 0.5em;
+      line-height: 1.5em;
+    }
+  }
+
+  h2 {
+    font-family: $font-love;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-family: $font-love;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+  }
+
+  p,
+  ul,
+  ol,
+  table {
+    color: $white;
+    font-size: 1.15rem;
+    line-height: 1.65rem;
+
+    @media (max-width: $sm-md) {
+      font-size: 1.15rem;
+      line-height: 1.5rem;
+    }
+
+    &.center {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  a {
+    color: $pink;
+    &:hover,
+    &:focus {
+      color: $pinkDark;
+    }
+  }
+
+  hr {
+    border-color: $pink;
+    border-width: 2px;
+    display: block;
+    margin: 5vw auto;
+  }
+
+  .cta {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.6rem;
+    margin-bottom: 3vw;
+
+    span {
+      @media (max-width: $sm) {
+        display: none;
+      }
+    }
+  }
+
+  .indent {
+    display: block;
+    margin-left: 60px;
+    padding: 10px;
+
+    @media (max-width: $sm) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.blue-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &.top {
+    background: $blueTop;
+  }
+
+  &.bottom {
+    background: $blueBottom;
+  }
+}
+
+// header (includes nav)
+
+.birthday-header {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5vw 0 0 0;
+
+  @media (max-width: $sm-md) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10vw 0 0 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.birthday-nav {
+  align-items: center;
+  display: flex;
+  font-family: "Love Ya Like A Sister", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  margin: 0 0 3rem 0;
+  justify-content: center;
+  width: 100%;
+
+  .birthday-nav--btn {
+    margin-left: 10px;
+    background: #eeeeee;
+    border: none;
+    border-radius: 5px;
+    color: #1b1b1b;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 8px 18px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background: $pink;
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+      text-decoration: none;
+    }
+
+    @media (max-width: $sm) {
+      margin: 0 0 15px 5px;
+    }
+  }
+
+  .birthday-nav--btn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// hero (flier)
+
+.birthday-hero {
+  display: flex;
+  width: 100vw;
+
+  @media (max-width: $sm-md) {
+    flex-direction: column;
+  }
+
+  ul {
+    padding: 0;
+    font-weight: 600;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  p {
+    margin-bottom: 1vw;
+  }
+
+  p,
+  li {
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+
+    @media (max-width: $sm-md) {
+      font-size: 10vw;
+      line-height: 10vw;
+    }
+
+    &.large {
+      font-family: "Love Ya Like A Sister", -apple-system, BlinkMacSystemFont,
+        Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    }
+
+    &.small {
+      font-size: 2vw;
+      line-height: 2vw;
+      text-transform: initial;
+
+      @media (max-width: $sm-md) {
+        font-size: 5.75vw;
+        line-height: 5.75vw;
+      }
+
+      &:last-child {
+        margin: 2vw 0;
+
+        @media (max-width: $sm-md) {
+          margin: 5vw 0;
+        }
+      }
+    }
+  }
+
+  .rsvp-button {
+    margin: 10vw 0 1vw;
+  }
+
+  .birthday-hero--left,
+  .birthday-hero--right {
+    width: 50.5vw;
+  }
+
+  .birthday-hero--left {
+    z-index: 2;
+
+    @media (max-width: $sm-md) {
+      margin: 0 0 -3vw 0;
+      width: 100%;
+    }
+  }
+
+  .birthday-hero--right {
+    background-image: url("/boat-right.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 0 0 -1vw;
+    padding: 10vw 0 0 10vw;
+    z-index: 1;
+
+    @media (max-width: $sm-md) {
+      background: $blue;
+      margin: -5vw 0 0 0;
+      padding: 10vw;
+      width: 101%;
+      z-index: 3;
+    }
+  }
+}
+
+// rsvp
+
+.birthday-rsvp {
+  text-align: center;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-bottom: 100px;
+
+    span {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-family: $font-love;
+    }
+  }
+}
+
+.rsvp-button {
+  background: linear-gradient(to bottom, $pink 5%, $pinkDark 100%);
+  background-color: $pink;
+  border-radius: 8px;
+  border: 3px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff !important;
+  font-family: Verdana;
+  font-size: 27px;
+  font-weight: bold;
+  padding: 30px 76px;
+  text-decoration: none;
+  margin-bottom: 2em;
+}
+
+.rsvp-button:hover {
+  color: #ffffff !important;
+  background: linear-gradient(
+    to bottom,
+    darken($pink, 10%) 5%,
+    darken($pinkDark, 10%) 100%
+  );
+  background-color: $pinkDark;
+}
+
+// itinerary
+
+.birthday-itinerary {
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+      @media (max-width: $sm-md) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    td {
+      padding: 3vw 2vw;
+
+      @media (max-width: $sm-md) {
+        padding: 5vw 4vw;
+      }
+
+      ul {
+        padding-left: 15px;
+      }
+
+      &.last {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    // column/row headers
+    thead tr td,
+    tbody tr td:first-child {
+      font-family: $font-love;
+      font-size: 1.5rem;
+      text-align: center;
+
+      @media (max-width: $sm-md) {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    thead tr td {
+      border-bottom: 3px solid $white;
+    }
+
+    thead tr td:first-child,
+    tbody tr td:first-child {
+      font-family: $font-love;
+      font-size: 1.5rem;
+      width: 190px;
+
+      @media (max-width: $sm-md) {
+        display: flex;
+        width: 100%;
+        border-bottom: none;
+      }
+    }
+
+    tbody tr {
+      td {
+        border-bottom: 2px solid $blue;
+      }
+
+      &:nth-child(even) td {
+        background-color: $whiteOpaque;
+        border-bottom: 2px solid $blue;
+      }
+
+      &:nth-child(odd) td {
+        background-color: $blueOpaque;
+        border-bottom: 2px solid $blue;
+      }
+    }
+  }
+}
+
+// accommodations
+
+// .birthday-accommodations {
+//   background: #dcccd1;
+//   color: #2a2c54;
+//   padding: 5rem 0 !important;
+//   width: 100%;
+
+//   a {
+//     color: #3b70ad;
+//     &:hover,
+//     &:focus {
+//       color: darken(#85c8e4, 25%);
+//     }
+//   }
+
+//   p,
+//   li {
+//     color: #2a2c54;
+//   }
+
+//   li {
+//     margin-bottom: 2rem;
+//   }
+
+//   .title {
+//     font-family: $font-love;
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     display: block;
+//     margin-bottom: 0.5rem;
+//   }
+// }
+
+// faq
+
+.birthday-faq {
+  ul {
+    @media (max-width: $sm-md) {
+      padding-left: 30px;
+    }
+  }
+
+  li {
+    margin-bottom: 2em;
+  }
+
+  li span {
+    font-family: $font-love;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  .parking-map {
+    width: 100%;
+  }
+}
+
+// footer
+
+.birthday-footer {
+  .birthday-footer--top {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vw 0;
+    width: 100%;
+
+    .button-icon {
+      align-self: start;
+      font-size: 1.5rem;
+      padding: 0 5px;
+    }
+
+    .sun {
+      max-width: 200px;
+      transform: rotate(-10deg);
+      width: 100%;
+    }
+  }
+}

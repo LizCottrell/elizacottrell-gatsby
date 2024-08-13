@@ -93,10 +93,7 @@ class BlockParty extends Component {
             src={blockparty1}
             alt="2500-2529 East Norris Street Block Party"
           />
-          <div
-            className="blockparty-hero--right"
-            // style={{ backgroundImage: `url(${blockparty2})` }}
-          >
+          <div className="blockparty-hero--right">
             <p>With games, food, music, bounce house + summer fun</p>
             <br />
             <hr />
