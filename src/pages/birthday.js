@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import "../styles/main.scss"
 import SEO from "../components/seo"
 import boatLeft from "../assets/images/boat-left.jpg"
-import boatRight from "../assets/images/boat-right.jpg"
+import hotelAnnaAndBel from "../assets/images/hotelAnnaAndBel.jpeg"
+import hotelHilton from "../assets/images/hotelHilton.jpeg"
 
 class Birthday extends Component {
   constructor(props) {
@@ -69,7 +70,7 @@ class Birthday extends Component {
               </div>
             </nav>
             <h1>
-              Over the Hill - On a Boat!
+              Over the Hill<span className="hyphen"> - </span>On a Boat!
               <span className="sub-heading">
                 Scott &amp; Elizabeth's Joint 40th Birthday Bash
               </span>
@@ -88,7 +89,7 @@ class Birthday extends Component {
           <div className="birthday-hero--right">
             <ul>
               <li className="large">Saturday, October 12</li>
-              <li className="large">5 PM - 1 AM</li>
+              <li className="large">5:30 PM - 2 AM</li>
               <li className="small">Penn's Landing + Fishtown</li>
               <li className="small">
                 <button
@@ -141,25 +142,38 @@ class Birthday extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td>5:15 PM</td>
+                  <td>5:30 PM</td>
                   <td>
                     <ul>
                       <li>
-                        🌅 GOOD EVENING! Meet at Penn's Landing at{" "}
+                        🌅 GOOD EVENING! <br />
+                        Meet at{" "}
                         <a href="https://g.co/kgs/y1hJW5W" target="_blank">
                           the Chart House
                         </a>{" "}
-                        at 5:15PM for a sunset cocktail hour on the waterfront
+                        in Penn's Landing at 5:30 PM for a sunset cocktail hour
+                        on the waterfront
                         <span class="indent">
-                          555 S Christopher Columbus Blvd | PHL, PA 19147
+                          555 S Columbus Blvd | PHL, PA 19147
                         </span>
                       </li>
-                      <li>🚙 PARKING: Parking at the dock is $20</li>
+                      <li>
+                        🚙 PARKING: see{" "}
+                        <button
+                          className="birthday-nav--btn button-link"
+                          onClick={() => {
+                            this.scroll(this.faq)
+                          }}
+                        >
+                          the FAQ section
+                        </button>{" "}
+                        for more info
+                      </li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
-                  <td>6:15 PM</td>
+                  <td>6:30-6:45 PM</td>
                   <td>
                     <ul>
                       <li>
@@ -170,22 +184,20 @@ class Birthday extends Component {
                         >
                           the City Cruises Philadelphia dock
                         </a>{" "}
-                        at 6:15PM to prepare to board 🛥 the Spirit of
+                        by 6:45PM to prepare to board 🛥 the Spirit of
                         Philadelphia 💦
                         <span class="indent">
-                          401 S. Columbus Boulevard | PHL, PA 19106
+                          401 S Columbus Blvd | PHL, PA 19106
                         </span>
                       </li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
-                  <td>6:30 PM</td>
+                  <td>7 PM</td>
                   <td>
                     <ul>
-                      <li>Board the boat!</li>
-                      <li>📸 Sign the guestbook</li>
-                      <li>🍾 Grab a drink</li>
+                      <li>🛥 Last call! All aboard!!</li>
                     </ul>
                   </td>
                 </tr>
@@ -193,12 +205,13 @@ class Birthday extends Component {
                   <td>7 - 9:30 PM</td>
                   <td>
                     <ul>
-                      <li>🐟 CRUISING</li>
-                      <li>Multi-course Dinner</li>
-                      <li>Dancing</li>
-                      <li>Deck games</li>
-                      <li>Open bar</li>
-                      <li>Birthday cake</li>
+                      <li>📸 Sign the guestbook &amp; grab a drink 🍾</li>
+                      <li>🛥 Get cruising!</li>
+                      <li>🍽 Multi-course Dinner</li>
+                      <li>💃 Dancing</li>
+                      <li>🎳 Deck games</li>
+                      <li>🍻 Open bar</li>
+                      <li>🎂 Birthday cake</li>
                     </ul>
                   </td>
                 </tr>
@@ -207,10 +220,11 @@ class Birthday extends Component {
                   <td>
                     <ul>
                       <li>
-                        Take a shuttle to the AFTER-PARTY at{" "}
+                        🚌 Take a shuttle to the AFTER-PARTY at{" "}
                         <a href="https://g.co/kgs/79nGwPX" target="_blank">
                           Starboard Side Tavern
-                        </a>
+                        </a>{" "}
+                        ⚓︎
                         <span class="indent">
                           2500 E Norris St | PHL, PA 19125
                         </span>
@@ -219,11 +233,11 @@ class Birthday extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td>10 PM - 1 AM</td>
+                  <td>10 PM - 2 AM</td>
                   <td>
                     <ul>
                       <li>
-                        AFTER-PARTY at{" "}
+                        🎉 AFTER-PARTY at{" "}
                         <a href="https://g.co/kgs/79nGwPX" target="_blank">
                           Starboard Side Tavern
                         </a>
@@ -234,14 +248,14 @@ class Birthday extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td>1 AM</td>
+                  <td>2 AM</td>
                   <td>
                     <ul>
                       <li>
                         THE PARTY IS OFFICIALLY OVER - Thank you for
                         participating!!!
                       </li>
-                      <li>Feel free to hang out in Fishtown</li>
+                      <li>🐟 Feel free to hang out in Fishtown</li>
                     </ul>
                   </td>
                 </tr>
@@ -253,109 +267,117 @@ class Birthday extends Component {
                 </tr>
               </tbody>
             </table>
-            <hr />
           </section>
+
+          <hr />
 
           <section
             className="birthday-accommodations"
             ref={this.accommodations}
           >
             <div className="container">
-              <header>
-                <h2>Accommodations</h2>
-                <button
-                  className="button-icon"
-                  onClick={() => {
-                    this.scroll(this.top)
-                  }}
-                >
-                  <i className="fa fa-arrow-up" />
-                  <span className="sr-only">Back to top</span>
-                </button>
-              </header>
-              <p>
-                We recommend the following hotels since they're extremely
-                walkable to the event locations:
-              </p>
-              <p>
-                <span className="title">
-                  ⛵️ Would you rather stay near the BOAT party?
-                  <br />
-                  <br />
-                </span>
-                <ul>
-                  <li>
-                    <p>
-                      <a
-                        href="https://www.hilton.com/en/hotels/phlpnhh-hilton-philadelphia-at-penns-landing/"
-                        target="_blank"
-                        title="Hilton at Penn's Landing"
-                      >
-                        Hilton Philadelpia at Penn's Landing
-                      </a>{" "}
-                      201 S Christopher Columbus Blvd | PHL, PA 19106
-                      <br />
-                      <span>
-                        The Hilton is an excellent waterfront hotel with
-                        incredible views right in Penn's Landing - the boat dock
-                        is a 6 minute walk south of the hotel through Spruce
-                        Street Harbor Park.
-                      </span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a
-                        href="https://www.hilton.com/en/hotels/phlpnhh-hilton-philadelphia-at-penns-landing/"
-                        target="_blank"
-                        title="Hilton at Penn's Landing"
-                      >
-                        Philadelphia Marriott Old City
-                      </a>{" "}
-                      One Dock St | PHL, PA 19106
-                      <br />
-                      <span>
-                        The Marriot is located in Old City and is a short 11
-                        minute walk from the dock.
-                      </span>
-                    </p>
-                  </li>
-                </ul>
-              </p>
-              <p>
-                <span className="title">
-                  🐟 Would you rather stay near the AFTER party?
-                  <br />
-                  <br />
-                </span>
-                <ul>
-                  <li>
-                    <p>
-                      <a
-                        href="https://annaandbel.com/"
-                        target="_blank"
-                        title="Hotel Anna &amp; Bel"
-                      >
-                        Hotel Anna &amp; Bel in Fishtown
-                      </a>{" "}
-                      1401 E Susquehanna Ave | PHL, PA 19125
-                      <br />
-                      <span>
-                        Hotel Anna &amp; Bel is a ✨ BRAND NEW ✨ 50-room
-                        full-service boutique hotel (very swanky) located in the
-                        heart of Fishtown - the after-party at Starboard Side
-                        Tavern is on the same block.
-                      </span>
-                    </p>
-                  </li>
-                </ul>
-              </p>
+              <div className="pink-panel">
+                <header>
+                  <h2>Accommodations</h2>
+                  <button
+                    className="button-icon"
+                    onClick={() => {
+                      this.scroll(this.top)
+                    }}
+                  >
+                    <i className="fa fa-arrow-up" />
+                    <span className="sr-only">Back to top</span>
+                  </button>
+                </header>
+                <p>
+                  We recommend the following hotels since they're extremely
+                  walkable to the event locations:
+                </p>
+                <p>
+                  <span className="title">
+                    🛥 Would you rather stay near the BOAT party?
+                    <br />
+                    <br />
+                  </span>
+                  <ul>
+                    <li>
+                      <p className="text-content">
+                        <a
+                          href="https://www.hilton.com/en/hotels/phlpnhh-hilton-philadelphia-at-penns-landing/"
+                          target="_blank"
+                          title="Hilton at Penn's Landing"
+                        >
+                          Hilton Philadelpia at Penn's Landing
+                        </a>
+                        <br />
+                        201 S Christopher Columbus Blvd | PHL, PA 19106
+                        <hr />
+                        <span>
+                          The Hilton is an excellent waterfront hotel with
+                          incredible views right in Penn's Landing - the boat
+                          dock is a 6 minute walk south of the hotel through
+                          Spruce Street Harbor Park.
+                        </span>
+                      </p>
+                      <img src={hotelHilton} />
+                    </li>
+                    <li>
+                      <p>
+                        <a
+                          href="https://www.hilton.com/en/hotels/phlpnhh-hilton-philadelphia-at-penns-landing/"
+                          target="_blank"
+                          title="Hilton at Penn's Landing"
+                        >
+                          Philadelphia Marriott Old City
+                        </a>
+                        <br />
+                        One Dock St | PHL, PA 19106
+                        <hr />
+                        <span>
+                          The Marriot is located in Old City and is a short 11
+                          minute walk from the dock.
+                        </span>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+                <p>
+                  <span className="title">
+                    🐟 Would you rather stay near the AFTER party?
+                    <br />
+                    <br />
+                  </span>
+                  <ul>
+                    <li>
+                      <p className="text-content">
+                        <a
+                          href="https://annaandbel.com/"
+                          target="_blank"
+                          title="Hotel Anna &amp; Bel"
+                        >
+                          Hotel Anna &amp; Bel in Fishtown
+                        </a>
+                        <br />
+                        1401 E Susquehanna Ave | PHL, PA 19125
+                        <hr />
+                        <span>
+                          Hotel Anna &amp; Bel is a ✨ BRAND NEW ✨ 50-room
+                          full-service boutique hotel (very swanky) located in
+                          the heart of Fishtown - the after-party at Starboard
+                          Side Tavern is on the same block.
+                        </span>
+                      </p>
+                      <img src={hotelAnnaAndBel} />
+                    </li>
+                  </ul>
+                </p>
+              </div>
             </div>
           </section>
 
+          <hr />
+
           <section className="birthday-quote">
-            <hr />
-            <br /> <br />
             <p className="center">
               "Always go to other people's funerals, otherwise they won't come
               to yours." <br />- Yogi Berra
@@ -363,8 +385,9 @@ class Birthday extends Component {
               <br />
               💛
             </p>
-            <hr />
           </section>
+
+          <hr />
 
           <section className="birthday-faq container" ref={this.faq}>
             <header>
@@ -382,7 +405,7 @@ class Birthday extends Component {
             <ul>
               <li>
                 <p>
-                  <span>🤷‍♀️ WHERE:</span>
+                  <span>🤷‍♀️ WHERE EXACTLY IS THIS HAPPENING?</span>
                   <a
                     href="https://www.google.com/maps/d/edit?mid=1jtptBVMwzfck7buJ1Oh2lvCwu8nk2a4&usp=sharing"
                     target="blank"
@@ -394,16 +417,16 @@ class Birthday extends Component {
               </li>
               <li>
                 <p>
-                  <span>
-                    🛌 I'M COMING FROM OUT OF TOWN, WHICH HOTEL SHOULD I STAY
-                    AT:
-                  </span>
+                  <span>🛌 WHICH HOTEL SHOULD I STAY AT?</span>
                   This party is going to be split between Penn's Landing and
-                  Fishtown. If you're not interested in the after-party at
-                  Starboard Side Tavern, staying in a hotel near the waterfront
-                  might be best. It's perfectly located to take advantage of Old
-                  City and all the attractions, restaurants, and sights historic
-                  Philly has to offer.
+                  Fishtown.
+                </p>
+                <p>
+                  If you only planning on participating in the boat cruise,
+                  staying in a hotel near the waterfront might be best. It's
+                  perfectly located to take advantage of Old City and all the
+                  attractions, restaurants, and sights historic Philly has to
+                  offer.
                 </p>
                 <p>
                   {" "}
@@ -415,18 +438,19 @@ class Birthday extends Component {
               </li>
               <li>
                 <p>
-                  <span>🚗 PARKING:</span> It depends! Please park either at
-                  Penn's Landing if you do not plan on going to the after-party
-                  OR if you DO plan on going to the after-party, park in
-                  Fishtown and take an Uber to the dock (you will be shuttled
-                  back to Fishtown after the boat cruise).
+                  <span>🚗 WHERE SHOULD I PARK?</span> It depends! Park at
+                  Penn's Landing if you do not plan on going to the after-party.
+                  If you DO plan on going to the after-party, park in Fishtown
+                  and take an Uber to the dock (you will be shuttled back to
+                  Fishtown after the boat cruise).
                 </p>
                 <ul>
                   <li>
                     <p>
-                      Parking at Penn's Landing: ~$20 local parking is available
-                      at Lombard Circle Parking Lot on Columbus Boulevard and
-                      Lombard Circle, and the other locations noted below.{" "}
+                      <span>Parking at Penn's Landing</span>
+                      ~$20 local parking is available at Lombard Circle Parking
+                      Lot on Columbus Boulevard and Lombard Circle, and the
+                      other locations noted below (option 8 is the closest).{" "}
                       <br />
                       <br />
                       <img
@@ -437,21 +461,22 @@ class Birthday extends Component {
                   </li>
                   <li>
                     <p>
-                      Parking in Fishtown: This is a little trickier because
-                      you'll have to find unpermited street parking or get 2 day
-                      parking passes (you can request these in your RSVP form).
-                      If you're staying at Hotel Anna &amp; Bel, they have a lot
-                      you can use.
+                      <span>Parking in Fishtown</span>
+                      This is a little trickier because you'll have to find
+                      unpermited street parking or get 2 day parking passes (you
+                      can request these in your RSVP form). If you're staying at
+                      Hotel Anna &amp; Bel, they have a parking lot you can use.
                     </p>
                   </li>
                 </ul>
               </li>
               <li>
                 <p>
-                  <span>🌭 FOOD &amp; DRINKS:</span> There will be appetizers
-                  and snacks at the Chart House for the cocktail hour. Buffet
-                  dinner will be provided on the cruise. And we'll have pizza
-                  delivered around 11 PM at Starboard. Open bars everywhere! 🍻
+                  <span>🌭 WILL THERE BE FOOD &amp; DRINKS?</span> There will be
+                  appetizers and snacks at the Chart House for the cocktail
+                  hour. Buffet dinner will be provided on the cruise. And we'll
+                  have pizza delivered around 11 PM at Starboard. Open bars
+                  everywhere! 🍻
                 </p>
               </li>
               <li>
@@ -462,21 +487,28 @@ class Birthday extends Component {
               </li>
               <li>
                 <p>
-                  <span>👗 DRESS CODE:</span> Boat fancy
+                  <span>👗 WHAT IS THE DRESS CODE?</span> Boat fancy
                 </p>
               </li>
               <li>
                 <p>
-                  <span>❓QUESTIONS:</span> Send any questions/concerns to Liz
-                  at{" "}
+                  <span>🎁 SHOULD I BRING A GIFT?</span> The best gift would be
+                  your presence 🤗
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>❓ HAVE A QUESTION?</span> Send any questions/concerns
+                  to Liz at{" "}
                   <a href="mailto:elizabeth.cottrell@gmail.com">
                     elizabeth.cottrell@gmail.com
                   </a>
                 </p>
               </li>
             </ul>
-            <hr />
           </section>
+
+          <hr />
 
           <section className="birthday-rsvp container" ref={this.rsvp}>
             <header>
@@ -503,8 +535,9 @@ class Birthday extends Component {
               Please <span>RSVP</span> no later than
               <br /> <span>SUNDAY - SEPTEMBER 1ST!</span>
             </p>
-            <hr />
           </section>
+
+          <hr />
 
           <footer className="birthday-footer container">
             <div className="birthday-footer--top">
