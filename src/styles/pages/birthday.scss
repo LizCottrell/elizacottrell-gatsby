@@ -14,7 +14,7 @@ $pink: #fda5a7;
 $pinkDark: #792c2e;
 $purple: #353b7c;
 
-$sm-md: 700px;
+$sm-md: 750px;
 
 $font-love: "Love Ya Like A Sister", -apple-system, BlinkMacSystemFont, Segoe UI,
   Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
@@ -84,8 +84,10 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
   h3 {
     font-family: $font-love;
     font-size: 1.75rem;
+    letter-spacing: 0.25rem;
     line-height: 1.75rem;
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   p,
@@ -109,9 +111,10 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
 
   a {
     color: $pink;
+    font-weight: 500;
     &:hover,
     &:focus {
-      color: lighten($pinkDark, 20%);
+      color: lighten($pinkDark, 30%);
     }
   }
 
@@ -120,6 +123,10 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     border-width: 2px;
     display: block;
     margin: 5vw auto;
+  }
+
+  .container {
+    max-width: 960px;
   }
 
   .cta {
@@ -138,7 +145,6 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
   .indent {
     display: block;
     margin-left: 40px;
-    padding: 10px;
 
     @media (max-width: $sm) {
       margin-left: 15px;
@@ -183,6 +189,10 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     line-height: 2rem;
     text-align: center;
     width: 100%;
+  }
+
+  hr {
+    margin: 3vw auto;
   }
 }
 
@@ -292,7 +302,7 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
   }
 
   .rsvp-button {
-    margin: 10vw 0 1vw;
+    margin: 5vw 0 1vw;
   }
 
   .birthday-hero--left,
@@ -403,6 +413,42 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
         border-bottom: 2px solid $blue;
       }
     }
+
+    .with-image {
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        max-width: 300px;
+        width: 30vw;
+      }
+    }
+  }
+}
+
+// images
+
+.birthday-image-container {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  @media (max-width: $sm-md) {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -413,10 +459,9 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     padding: 0 40px;
   }
 
-  ul li {
+  .hotel-with-img {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 2rem;
 
     @media (max-width: $sm-md) {
       display: block;
@@ -468,7 +513,7 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     ul,
     li {
       color: lighten($blueDark, 10%);
-      font-weight: 700;
+      font-weight: 500;
     }
 
     a {
