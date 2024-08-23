@@ -8,6 +8,8 @@ import ship from "../assets/images/ship.png"
 import chartHouse from "../assets/images/charthouse.png"
 import spiritOfPhiladelphia from "../assets/images/spiritofphiladelphia.jpeg"
 import starboard from "../assets/images/starboard.jpeg"
+import sushi from "../assets/images/sushi.png"
+import ipd from "../assets/images/ipd.png"
 
 class Birthday extends Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class Birthday extends Component {
     this.itinerary = React.createRef()
     this.faq = React.createRef()
     this.accommodations = React.createRef()
+    this.todo = React.createRef()
   }
 
   scroll(ref) {
@@ -314,6 +317,8 @@ class Birthday extends Component {
                 <p>
                   For quick reference, following hotels are walkable to the
                   event locations but there are cheaper options not listed:
+                  <br />
+                  <br />
                 </p>
                 <div>
                   <p className="title">
@@ -321,7 +326,7 @@ class Birthday extends Component {
                   </p>
                   <ul>
                     <li>
-                      <div className="hotel-with-img">
+                      <div className="list-item-with-img">
                         <div>
                           <a
                             href="https://www.hilton.com/en/hotels/phlpnhh-hilton-philadelphia-at-penns-landing/"
@@ -331,7 +336,7 @@ class Birthday extends Component {
                             Hilton Philadelpia at Penn's Landing
                           </a>
                           <p>201 S Columbus Blvd, Old City</p>
-                          <hr />
+
                           <p>
                             The Hilton is a waterfront hotel right in Penn's
                             Landing and adjacent to Spruce Street Harbor Park -
@@ -352,10 +357,12 @@ class Birthday extends Component {
                           Philadelphia Marriott Old City
                         </a>
                         <p>One Dock Street, Old City</p>
-                        <hr />
                         <p>
                           The Marriot is located in Old City and is a short 11
                           minute walk from the dock.
+                          <br />
+                          <br />
+                          <br />
                         </p>
                       </div>
                     </li>
@@ -367,7 +374,7 @@ class Birthday extends Component {
                   </p>
                   <ul>
                     <li>
-                      <div className="hotel-with-img">
+                      <div className="list-item-with-img">
                         <div>
                           <a
                             href="https://annaandbel.com/"
@@ -377,7 +384,6 @@ class Birthday extends Component {
                             Hotel Anna &amp; Bel
                           </a>
                           <p>1401 E Susquehanna Ave, Fishtown</p>
-                          <hr />
                           <p>
                             Hotel Anna &amp; Bel is a ✨ BRAND NEW ✨ 50-room
                             full-service boutique hotel (very swanky) located in
@@ -476,10 +482,23 @@ class Birthday extends Component {
                   after-party, then staying in Fishtown might be more
                   convenient.
                 </p>
-                <p></p>
-                <p> </p>
               </li>
-
+              <li>
+                <p>
+                  <span>🏙 WHAT ELSE IS THERE TO DO IN PHILLY?</span>
+                  So much. Check out this additional section below of
+                  restaurants, places, and seasonal events happening in Philly
+                  over the weekend:{" "}
+                  <button
+                    className="birthday-nav--btn button-link"
+                    onClick={() => {
+                      this.scroll(this.todo)
+                    }}
+                  >
+                    "What to do in Philly?"
+                  </button>
+                </p>
+              </li>
               <li>
                 <p>
                   <span>🌭 WILL THERE BE FOOD &amp; DRINKS?</span> Light
@@ -527,6 +546,508 @@ class Birthday extends Component {
                 </p>
               </li>
             </ul>
+          </section>
+
+          <hr />
+
+          <section className="birthday-todo" ref={this.todo}>
+            <div className="container">
+              <div className="pink-panel">
+                <header>
+                  <h2>What else is there to do in Philly?</h2>
+                  <button
+                    className="button-icon"
+                    onClick={() => {
+                      this.scroll(this.top)
+                    }}
+                  >
+                    <i className="fa fa-arrow-up" />
+                    <span className="sr-only">Back to top</span>
+                  </button>
+                </header>
+                <p>
+                  Are you spending the weekend in Philadelphia and looking for
+                  other things to do and places to explore? <br />
+                  <br />
+                  There are plenty of museums and well-known historical spots to
+                  enjoy - a personal favorite is any{" "}
+                  <a
+                    href="https://www.tripadvisor.com/Attraction_Products-g60795-t12058-zfg11873-a_contentId.129029781267+14161074930-Philadelphia_Pennsylvania.html"
+                    target="_blank"
+                  >
+                    hop-on-hop-off city tour bus
+                  </a>{" "}
+                  right when you get to the city to get a lay of the land. But
+                  if you're still wondering what to do, check out some of these
+                  suggestions below:
+                  <br />
+                  <br />
+                </p>
+                <hr />
+                <br />
+                <div>
+                  <div className="todo-section">
+                    <ul className="todo-list">
+                      <li className="todo-list-item">
+                        <div>
+                          <h3>
+                            <a
+                              href="https://www.visitphilly.com/articles/philadelphia/award-winning-critically-acclaimed/"
+                              target="_self"
+                            >
+                              Dine at a critically acclaimed restaurant (or two,
+                              or three...){" "}
+                            </a>
+                          </h3>
+                          <h4>Philly does good food right...</h4>
+                        </div>
+                        <div className="list-item-with-img">
+                          <div>
+                            <div>
+                              <p>
+                                There’s no way around it: Philly’s{" "}
+                                <a href="https://www.visitphilly.com/food-drink/">
+                                  dining scene
+                                </a>{" "}
+                                is special. Philly restaurants regularly make{" "}
+                                <a href="https://www.visitphilly.com/articles/philadelphia/award-winning-critically-acclaimed/#food-drink">
+                                  ”best of” lists
+                                </a>{" "}
+                                from <em>The New York Times</em>,{" "}
+                                <em>Bon Appétit</em>,{" "}
+                                <em>Condé Nast Traveler</em> and more. Some of
+                                the latest critically acclaimed spots:
+                              </p>
+                              <ul>
+                                <li>
+                                  Royal Sushi &amp; Izakaya (
+                                  <a href="https://www.visitphilly.com/features/james-beard-awards-finalist-2024/">
+                                    Best Chef: Mid-Atlantic finalist
+                                  </a>
+                                  , James Beard Foundation)
+                                </li>
+                                <li>
+                                  Bloomsday (
+                                  <a
+                                    href="https://www.usatoday.com/story/life/food-dining/2024/07/29/best-bars-2024/73989737007/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-describedby="audioeye_new_window_message"
+                                  >
+                                    The Best Bars in America
+                                  </a>
+                                  , <em>USA Today</em>)
+                                </li>
+                                <li>
+                                  San Lucas Pizzeria (
+                                  <a
+                                    href="https://www.nytimes.com/article/best-pizza.html"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-describedby="audioeye_new_window_message"
+                                  >
+                                    22 of the Best Pizza Places in the United
+                                    States
+                                  </a>
+                                  , <em>The New York Times</em>), and
+                                </li>
+                                <li>
+                                  Oyster House (
+                                  <a
+                                    href="https://www.esquire.com/food-drink/restaurants/a60861336/best-oyster-bars-america/"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-describedby="audioeye_new_window_message"
+                                  >
+                                    The 10 Best Oyster Bars in America Right Now
+                                  </a>
+                                  , <em>Esquire</em>).
+                                </li>
+                              </ul>
+                              <p>
+                                Find more about Philly’s award-winning
+                                restaurants{" "}
+                                <a href="https://www.visitphilly.com/articles/philadelphia/award-winning-critically-acclaimed/#restaurants-eateries-markets">
+                                  here
+                                </a>
+                                .
+                              </p>
+                            </div>
+
+                            <div class="vp-article-section__details">
+                              <p class="vp-article-section__detail-item">
+                                <strong>Where:</strong>{" "}
+                                <a
+                                  href="https://maps.google.com/?cid=7564578590319575702"
+                                  target="_blank"
+                                  aria-describedby="audioeye_new_window_message"
+                                >
+                                  Various locations including Royal Sushi &amp;
+                                  Izakaya, 780 S. 2nd Street
+                                  <i class="vp-icon vp-icon-link"></i>
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+
+                          <img
+                            alt="Photo by Jesse Ito in Royal Izakaya."
+                            src={sushi}
+                          />
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <h3>
+                            <a
+                              href="https://www.visitphilly.com/articles/philadelphia/best-things-to-eat-at-reading-terminal-market/"
+                              target="_self"
+                            >
+                              Chow down on food from dozens of vendors at
+                              Reading Terminal Market{" "}
+                            </a>
+                          </h3>
+                          <h4>
+                            One of America's oldest farmers market and current
+                            food paradise...
+                          </h4>
+                        </div>
+                        <div className="list-item-with-img">
+                          <div>
+                            <p>
+                              Set below a former railroad terminal, Center
+                              City's 127-year-old{" "}
+                              <a href="https://www.visitphilly.com/articles/philadelphia/best-things-to-eat-at-reading-terminal-market/">
+                                Reading Terminal Market
+                              </a>{" "}
+                              serves as both a dazzling tourist destination and
+                              a trusted source for fresh produce, seafood, meats
+                              and cheese for locals. The public space also
+                              provides open seating where customers can enjoy a
+                              world of cuisines from dozens of restaurants,
+                              including Pennsylvania Dutch vendors and sandwich
+                              slingers like the acclaimed DiNic's, serving up
+                              hot roast pork sandwiches that rival the city's
+                              much-lauded cheesesteaks. Retail merchants sell
+                              housewares, jewelry, linens and more.
+                            </p>
+                            <p class="vp-article-section__detail-item">
+                              <strong>Where:</strong>{" "}
+                              <a
+                                href="https://maps.google.com/?cid=340801453161322366"
+                                target="_blank"
+                              >
+                                Reading Terminal Market, 51 N. 12th Street
+                              </a>
+                            </p>
+                          </div>
+                          <img src="https://www.visitphilly.com/wp-content/uploads/2018/02/ReadingTerminalMarket-R-Kennedy-2200VP.jpg" />
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <h3>
+                            <a
+                              href="https://chinatown-pcdc.org/yeshi-chinatown-night-market-2024%E5%8D%8E%E5%9F%A0%E5%A4%9C%E5%B8%82/"
+                              target="_blank"
+                            >
+                              YèShì Chinatown Night Market{" "}
+                            </a>
+                          </h3>
+                          <h4>Thursday, October 10, 2024 | 6-10 p.m.</h4>
+                        </div>
+                        <div className="list-item-with-img">
+                          <div>
+                            <p>
+                              This{" "}
+                              <a
+                                href="https://chinatown-pcdc.org/yeshi-chinatown-night-market-2024%E5%8D%8E%E5%9F%A0%E5%A4%9C%E5%B8%82/"
+                                target="_blank"
+                              >
+                                street festival
+                              </a>{" "}
+                              huts down 10th Street between Arch Street and
+                              Winter Street and the surrounding streets for a
+                              night of food, live performance, arts, crafts and
+                              shopping. Drawing over 60 vendors and 20,000
+                              festival-goers, the annual event is one of the
+                              biggest in{" "}
+                              <a href="https://www.visitphilly.com/areas/philadelphia-neighborhoods/chinatown/">
+                                Chinatown
+                              </a>{" "}
+                              and a prime opportunity to explore the
+                              neighborhood's rich culture and chow down on some
+                              of the city's best eats.
+                            </p>
+                            <p>
+                              <strong>Where:</strong>{" "}
+                              <a
+                                href="https://maps.google.com/?q=Arch+Street+%26+North+10th+Street&amp;ftid=0x89c6c62a215c0553:0x4e76da378ac675a7"
+                                target="_blank"
+                              >
+                                10th Street between Arch and Winter streets
+                              </a>
+                            </p>
+                          </div>
+                          <img src="https://chinatown-pcdc.org/wp-content/uploads/2023/07/IMG_8810-1-scaled.jpg" />
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <div>
+                            <h3>
+                              <a
+                                href="https://peddlersvillage.com/event/octoberfeast/"
+                                target="_blank"
+                              >
+                                OctoberFeast at Peddler's Village{" "}
+                              </a>
+                            </h3>
+                            <h4>October 12-13, 2024 </h4>
+                          </div>
+                          <div className="list-item-with-img">
+                            <div>
+                              <p>
+                                Prost! Transport yourself to Germany without
+                                leaving{" "}
+                                <a href="https://www.visitphilly.com/areas/bucks-county/">
+                                  Bucks County
+                                </a>{" "}
+                                as{" "}
+                                <a href="https://www.visitphilly.com/things-to-do/attractions/peddlers-village/">
+                                  Peddler's Village
+                                </a>{" "}
+                                hosts its annual{" "}
+                                <a
+                                  href="https://peddlersvillage.com/event/octoberfeast/"
+                                  target="_blank"
+                                >
+                                  OctoberFeast
+                                </a>{" "}
+                                in mid-October. Over the course of two days,
+                                visitors can sample beers in the beer garden,
+                                enjoy fare from food trucks, and delight in
+                                German brass music and folk dances.
+                              </p>
+
+                              <p>
+                                <strong>Where:</strong>{" "}
+                                <a
+                                  href="https://maps.google.com/?cid=16429573404433012892"
+                                  target="_blank"
+                                >
+                                  Peddler's Village, 100 Peddlers Village,
+                                  Lahaska
+                                  <i class="vp-icon vp-icon-link"></i>
+                                </a>
+                              </p>
+                            </div>
+                            <img
+                              alt="People dancing in front of a band at Peddler's Village"
+                              src="https://www.visitphilly.com/wp-content/uploads/2023/08/octoberfeast-crtsy-peddlers-village-1200x900px-1044x781.jpg"
+                            />
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <div>
+                            <h3>
+                              <a
+                                href="https://www.philadelphiazoo.org/events/boo-at-the-zoo/"
+                                target="_blank"
+                              >
+                                Boo at the Zoo
+                              </a>
+                            </h3>
+                            <h4>October 12-13, 2024 | 9:30 a.m. - 5 p.m. </h4>
+                          </div>
+
+                          <div className="list-item-with-img">
+                            <div>
+                              <p>
+                                Lions &amp; tigers &amp; bears, oh my! Gather
+                                your ghosts and goblins, put on your favorite
+                                costume, bring a bag, and trick-or-treat
+                                throughout the Zoo. Be sure to visit all our
+                                animal exhibits to see who might be munching on
+                                pumpkins or playing with Halloween-themed
+                                enrichment! Enjoy seasonal décor, photo
+                                opportunities, festive fall offerings, fun
+                                children's activities, and more.
+                              </p>
+
+                              <p>
+                                <strong>Where:</strong>{" "}
+                                <a
+                                  href="https://maps.app.goo.gl/cazEaazyurfEZRh89"
+                                  target="_blank"
+                                >
+                                  Philadelphia Zoo, 3400 W Girard Ave,
+                                  Philadelphia
+                                  <i class="vp-icon vp-icon-link"></i>
+                                </a>
+                              </p>
+                            </div>
+                            <img
+                              sizes="100vw"
+                              src="https://imagedelivery.net/B1cQ25kkcnI58rsV8pY1ng/3ab93465-0dfd-4f6a-ff0f-771480c59100/w=9999"
+                              alt="booatthezoo 2 2"
+                            />
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <div>
+                            <h3>
+                              <a href="https://ipdphilly.org/" target="_blank">
+                                Indigenous People's Day Philly 2024 at
+                                Shackamaxon (Penn Treaty Park){" "}
+                              </a>
+                            </h3>
+                            <h4>Monday, October 14, 2024 </h4>
+                          </div>
+
+                          <div className="list-item-with-img">
+                            <div>
+                              <p>
+                                Each year, Philadelphia and Indigenous
+                                communities from across the nation gather at
+                                Shackamaxon, also known as{" "}
+                                <a href="https://www.visitphilly.com/things-to-do/attractions/penn-treaty-park/">
+                                  Penn Treaty Park
+                                </a>
+                                , to mark five-plus centuries of Indigenous
+                                history and culture. This year's{" "}
+                                <a
+                                  href="https://ipdphilly.org/"
+                                  target="_blank"
+                                >
+                                  Philadelphia's Indigenous People's Day
+                                </a>{" "}
+                                celebration features speakers, performers, and
+                                vendors from as far away as Mexico and South
+                                America. The event is pay-what-you-wish, though
+                                suggested donations of $12 are encouraged.
+                              </p>
+
+                              <p>
+                                <strong>Where:</strong>{" "}
+                                <a
+                                  href="https://maps.google.com/?cid=11045384434181876395"
+                                  target="_blank"
+                                >
+                                  Shackamaxon (Penn Treaty Park), 1301 N. Beach
+                                  Street<i class="vp-icon vp-icon-link"></i>
+                                </a>
+                              </p>
+                            </div>
+                            <img
+                              alt="Photo by Jesse Ito in Royal Izakaya."
+                              src={ipd}
+                            />
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <div>
+                            <h3>
+                              <a
+                                href="https://www.visitphilly.com/things-to-do/"
+                                target="_self"
+                              >
+                                Bonus: More Things to Do in Greater Philadelphia{" "}
+                              </a>
+                            </h3>
+                            <h4>
+                              Award-winning food, dynamic neighborhoods and
+                              history-making attractions await...
+                            </h4>
+                          </div>
+
+                          <div className="list-item-with-img">
+                            <div>
+                              <p>
+                                Looking for even more great{" "}
+                                <a href="https://www.visitphilly.com/things-to-do/">
+                                  things to do
+                                </a>{" "}
+                                in Greater Philadelphia? Of course you are! And
+                                in Greater Philadelphia, there is so much to
+                                explore, discover or rediscover. We’ve got ideas
+                                for:
+                              </p>
+                              <ul>
+                                <li>
+                                  perfect things to do on your{" "}
+                                  <a href="https://www.visitphilly.com/articles/philadelphia/most-essential-things-to-do-in-philadelphia-on-a-return-visit/">
+                                    second trip to Philly
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="https://www.visitphilly.com/articles/philadelphia/essential-philly-eats-meals-and-dishes/">
+                                    12 essential Philly eats
+                                  </a>{" "}
+                                  from appetizers to desserts
+                                </li>
+                                <li>
+                                  the city’s best{" "}
+                                  <a href="https://www.visitphilly.com/articles/philadelphia/phillys-hidden-gems/">
+                                    hidden gems
+                                  </a>{" "}
+                                  you probably don’t know about
+                                </li>
+                                <li>
+                                  the{" "}
+                                  <a href="https://www.visitphilly.com/articles/philadelphia/most-beautiful-places/">
+                                    most beautiful places
+                                  </a>{" "}
+                                  in Greater Philadelphia
+                                </li>
+                                <li>
+                                  <a href="https://www.visitphilly.com/media-center/press-releases/hidden-bars-restaurants-in-philadelphia/">
+                                    secret bars and restaurants
+                                  </a>
+                                  , and
+                                </li>
+                                <li>
+                                  <a href="https://www.visitphilly.com/articles/philadelphia/top-attractions-philadelphia-countryside/">
+                                    dozens of day-trip ideas
+                                  </a>{" "}
+                                  out into Philadelphia’s Countryside.
+                                </li>
+                              </ul>
+                              <p>
+                                Find more ideas{" "}
+                                <a href="https://www.visitphilly.com/things-to-do/">
+                                  right this way
+                                </a>{" "}
+                                for your next exploration — then{" "}
+                                <a href="https://www.visitphilly.com/hotels/">
+                                  book a stay at one of the city’s great hotels.
+                                </a>
+                              </p>
+                            </div>
+                            <img
+                              alt=""
+                              src="https://www.visitphilly.com/wp-content/uploads/2020/09/philadelphia-skyline-museum-of-art-by-elevated-angles-for-vp-2200x1237px-1044x781.jpg"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
           <hr />

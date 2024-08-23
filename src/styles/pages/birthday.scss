@@ -34,6 +34,7 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     padding-top: 0;
     padding-bottom: 0;
     margin: 50px 0;
+    width: 100%;
 
     header {
       display: flex;
@@ -148,6 +149,72 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
 
     @media (max-width: $sm) {
       margin-left: 15px;
+    }
+  }
+
+  .pink-panel {
+    background: #f3afae;
+    background: linear-gradient(180deg, #f3afae, #f7d9d9);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 5vw;
+    color: lighten($blueDark, 10%);
+
+    @media (max-width: $sm-md) {
+      padding: 50px 15px;
+    }
+
+    p,
+    ul,
+    li {
+      color: lighten($blueDark, 10%);
+      font-weight: 500;
+    }
+
+    a {
+      color: $blue;
+      &:hover,
+      &:focus {
+        color: darken($blue, 20%);
+      }
+    }
+
+    hr {
+      margin: 1rem 0;
+      border-color: $white;
+      border-width: 2px;
+    }
+
+    h2 {
+      @media (max-width: $sm-md) {
+        font-size: 2rem;
+      }
+    }
+
+    img {
+      height: auto;
+      max-width: 350px;
+      width: 45%;
+      margin: 0 0 0 30px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      @media (max-width: $sm-md) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .title {
+      font-family: $font-love;
+      font-size: 1.5rem;
+    }
+
+    .list-item-with-img {
+      display: flex;
+      align-items: flex-start;
+
+      @media (max-width: $sm-md) {
+        display: block;
+      }
     }
   }
 }
@@ -458,76 +525,6 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
   ul {
     padding: 0 40px;
   }
-
-  .hotel-with-img {
-    display: flex;
-    align-items: flex-start;
-
-    @media (max-width: $sm-md) {
-      display: block;
-    }
-  }
-
-  img {
-    height: auto;
-    max-width: 350px;
-    width: 45%;
-    margin: 0 0 0 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-    @media (max-width: $sm-md) {
-      width: 100%;
-      margin: 0;
-    }
-  }
-
-  h2 {
-    @media (max-width: $sm-md) {
-      font-size: 2rem;
-    }
-  }
-
-  .title {
-    font-family: $font-love;
-    font-size: 1.5rem;
-  }
-
-  hr {
-    margin: 1rem 0;
-    border-color: $pink;
-    border-width: 1px;
-  }
-
-  .pink-panel {
-    background: #f3afae;
-    background: linear-gradient(180deg, #f3afae, #f7d9d9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 5vw;
-    color: lighten($blueDark, 10%);
-
-    @media (max-width: $sm-md) {
-      padding: 50px 15px;
-    }
-
-    p,
-    ul,
-    li {
-      color: lighten($blueDark, 10%);
-      font-weight: 500;
-    }
-
-    a {
-      color: $blue;
-      &:hover,
-      &:focus {
-        color: darken($blue, 20%);
-      }
-    }
-
-    hr {
-      border-color: $white;
-    }
-  }
 }
 
 // quote
@@ -558,6 +555,23 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
 
   .parking-map {
     width: 100%;
+  }
+}
+
+// todo
+
+.birthday-todo {
+  .todo-list {
+    padding-inline-start: 20px;
+
+    @media (max-width: $sm-md) {
+      padding-inline-start: 0;
+      list-style: none;
+    }
+  }
+
+  .todo-list-item {
+    margin-bottom: 40px;
   }
 }
 
@@ -618,12 +632,6 @@ $font-nunito: "Nunito Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
       align-self: start;
       font-size: 1.5rem;
       padding: 0 5px;
-    }
-
-    .sun {
-      max-width: 200px;
-      transform: rotate(-10deg);
-      width: 100%;
     }
   }
 }
