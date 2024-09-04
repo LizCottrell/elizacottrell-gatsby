@@ -122,7 +122,7 @@ class Birthday extends Component {
               <li className="large">5:30 PM - 2 AM</li>
               <li className="small">Penn's Landing + Fishtown</li>
             </ul>
-            <p className="small">Please RSVP by Sept-4</p>
+            <p className="small">Please RSVP by Sept-15</p>
             <a
               href="https://forms.gle/Nq6HNkQaNfXttxQ3A"
               className="rsvp-button"
@@ -527,7 +527,13 @@ class Birthday extends Component {
               </li>
               <li>
                 <p>
-                  <span>👗 WHAT IS THE DRESS CODE?</span> Boat fancy
+                  <span>👗 WHAT IS THE DRESS CODE?</span>{" "}
+                  <a
+                    href="https://media1.popsugar-assets.com/files/thumbor/WO-vCxsmjdO47kr-YHB0_vzWAcY=/fit-in/800x310/top/filters:format_auto():upscale()/2016/07/13/923/n/1922283/698d975afa6a868e_14.gif"
+                    target="_blank"
+                  >
+                    Boat fancy
+                  </a>
                 </p>
               </li>
               <li>
@@ -797,6 +803,117 @@ class Birthday extends Component {
                       </li>
                       <li className="todo-list-item">
                         <div>
+                          <h3>
+                            <a
+                              href="https://www.eventbrite.com/e/23rd-street-armory-oktoberfest-tickets-998692655617"
+                              target="_blank"
+                            >
+                              23rd Street Armory Oktoberfest{" "}
+                            </a>
+                          </h3>
+                          <h4>Friday, October 11, 2024 | 7:30-11:30 p.m.</h4>
+                        </div>
+                        <div className="list-item-with-img">
+                          <div>
+                            <p>
+                              Back for its 6th year,{" "}
+                              <a
+                                href="https://brauhausschmitz.com/events/armory-oktoberfest/"
+                                target="_blank"
+                              >
+                                Brauhaus Schmitz
+                              </a>{" "}
+                              transforms the 23rd Street Armory into a Bavarian
+                              Wonderland! Join us for a fun-filled evening of
+                              Oktoberfest festivities right in Center City
+                              Philadelphia! Get ready to indulge in delicious
+                              German food, sip on Liters of imported Oktoberfest
+                              beers, and dance your heart out to live German
+                              Party music. Philadelphia's largest Oktoberfest is
+                              the perfect opportunity to immerse yourself in the
+                              rich traditions of Germany. So grab your
+                              lederhosen and dirndls, and join us on Friday for
+                              a night of unforgettable fun!
+                            </p>
+                            <p>
+                              <strong>Where:</strong>{" "}
+                              <a
+                                href="https://maps.app.goo.gl/xQf7pFU1VkY71Uj77"
+                                target="_blank"
+                              >
+                                23rd Street Armory, South 23rd Street,
+                                Philadelphia, PA, USA
+                              </a>
+                            </p>
+                          </div>
+                          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F830135649%2F74334430949%2F1%2Foriginal.20240819-215522?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3abefbd46543092f89091a044f678d61" />
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
+                          <div>
+                            <h3>
+                              <a
+                                href="https://www.galaeiqtbipoc.org/ourfest/"
+                                target="_blank"
+                              >
+                                OURfest 2024: National Coming Out Parade &amp;
+                                Festival{" "}
+                              </a>
+                            </h3>
+                            <h4>Saturday &amp; Sunday, October 12-13, 2024</h4>
+                          </div>
+                          <div className="list-item-with-img">
+                            <div>
+                              <p>
+                                <strong>National Coming Out Parade:</strong>
+                                <br />
+                                Kicking off on Saturday, October 12th, from 4:00
+                                pm to 6:00 pm, the parade will feature a
+                                colorful display of curated floats, community
+                                organizations, and live performances.
+                                Participants will march from 5th and Market to
+                                Broad and Locust, showcasing the vibrancy and
+                                diversity of the LGBTQIA+ community.
+                                <br />
+                                <br />
+                                <strong>
+                                  National Coming Out Festival &amp; Resource
+                                  Fair:
+                                </strong>
+                                <br />
+                                On Sunday, October 13th, from 12:00 pm to 7:00
+                                pm, the Gayborhood will come alive with one of
+                                the largest outdoor festivals of the year. The
+                                event will include a resource fair,
+                                family-friendly programming, food trucks, beer
+                                gardens, and multiple performance stages
+                                featuring local artists, entertainers, and
+                                community speakers.
+                              </p>
+
+                              <p>
+                                <strong>Where:</strong>{" "}
+                                <a
+                                  href="https://maps.app.goo.gl/18PfRj9xsqr1cwuU6"
+                                  target="_blank"
+                                >
+                                  Gayborhood, 12th &amp; Locust
+                                  <i class="vp-icon vp-icon-link"></i>
+                                </a>
+                              </p>
+                            </div>
+                            <img
+                              alt="OurFest 2024"
+                              src="https://www.galaeiqtbipoc.org/wp-content/uploads/2024/09/image_1724785085789_4dpcndbwc.webp"
+                            />
+                          </div>
+                        </div>
+                        <hr />
+                      </li>
+                      <li className="todo-list-item">
+                        <div>
                           <div>
                             <h3>
                               <a
@@ -806,7 +923,7 @@ class Birthday extends Component {
                                 OctoberFeast at Peddler's Village{" "}
                               </a>
                             </h3>
-                            <h4>October 12-13, 2024 </h4>
+                            <h4>Saturday &amp; Sunday, October 12-13, 2024 </h4>
                           </div>
                           <div className="list-item-with-img">
                             <div>
@@ -864,7 +981,10 @@ class Birthday extends Component {
                                 Boo at the Zoo
                               </a>
                             </h3>
-                            <h4>October 12-13, 2024 | 9:30 a.m. - 5 p.m. </h4>
+                            <h4>
+                              Saturday &amp; Sunday, October 12-13, 2024 | 9:30
+                              a.m. - 5 p.m.{" "}
+                            </h4>
                           </div>
 
                           <div className="list-item-with-img">
@@ -1075,7 +1195,7 @@ class Birthday extends Component {
             </a>
             <p>
               Please <span>RSVP</span> by
-              <br /> <span>SEPTEMBER 4!</span>
+              <br /> <span>SEPTEMBER 15!</span>
             </p>
           </section>
 
