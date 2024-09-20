@@ -122,7 +122,7 @@ class Birthday extends Component {
               <li className="large">5:30 PM - 2 AM</li>
               <li className="small">Penn's Landing + Fishtown</li>
             </ul>
-            <p className="small">Please RSVP by Sept-15</p>
+            <p className="small">Please RSVP by Oct-5 ↓</p>
             <a
               href="https://forms.gle/Nq6HNkQaNfXttxQ3A"
               className="rsvp-button"
@@ -1191,11 +1191,14 @@ class Birthday extends Component {
               className="rsvp-button"
               target="_blank"
             >
-              RSVP NOW
+              RSVP TODAY!
             </a>
             <p>
               Please <span>RSVP</span> by
-              <br /> <span>SEPTEMBER 15!</span>
+              <br />{" "}
+              <span>
+                OCTOBER 5<sup>th</sup>!
+              </span>{" "}
             </p>
           </section>
 
