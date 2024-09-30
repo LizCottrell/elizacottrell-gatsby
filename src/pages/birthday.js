@@ -240,9 +240,7 @@ class Birthday extends Component {
                   <td>
                     <h3>Shuttle Bus</h3>
                     <p>
-                      <strong>
-                        Philadelphia Trolley Works ('76 Carriage Company)
-                      </strong>
+                      <strong>Yellowbird Bus Company</strong>
                     </p>
                     <ul className="indent">
                       <li>
@@ -265,6 +263,10 @@ class Birthday extends Component {
                     </p>
                     <ul className="indent">
                       <li>🎉 🍕 Dancing, pizza, good times 🕺 </li>
+                      <li>
+                        Too crowded? Spill-over to flow to our house across the
+                        street 🏡
+                      </li>
                     </ul>
                   </td>
                 </tr>
@@ -414,7 +416,7 @@ class Birthday extends Component {
 
           <hr />
 
-          <section className="birthday-faq container" ref={this.faq}>
+          <section id="faq" className="birthday-faq container" ref={this.faq}>
             <header>
               <h2>Frequently Asked Questions</h2>
               <button
